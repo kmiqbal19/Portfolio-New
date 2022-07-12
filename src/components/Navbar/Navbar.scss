@@ -1,0 +1,36 @@
+div.line {
+  background-color: red;
+  margin: 0.4rem 0rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+div.line-1 {
+  width: 40%;
+  height: 3px;
+  align-self: flex-end;
+}
+div.line-2 {
+  width: 60%;
+  height: 5px;
+}
+div.line-3 {
+  width: 40%;
+  height: 3px;
+  align-self: flex-start;
+}
+div.cross-line {
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+div.cross-line-1 {
+  transform: rotateZ(40deg);
+  top: 45%;
+  left: 8%;
+}
+div.cross-line-2 {
+  transform: rotateZ(-41deg);
+  top: 47%;
+  left: 8%;
+}
