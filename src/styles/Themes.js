@@ -16,5 +16,5 @@ export const theme = {
   fontxxxl: "5rem",
   fontBig: "10rem",
 
-  navHeight: "5rem",
+  navHeight: "8rem",
 };
