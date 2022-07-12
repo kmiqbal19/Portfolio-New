@@ -1,57 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useRef } from "react";
+import GlobalStyles from "./styles/GlobalStyles";
+import { theme } from "./styles/Themes.js";
 
+import { ThemeProvider } from "styled-components";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import { AnimatePresence } from "framer-motion";
+import Home from "./sections/Home";
 function App() {
+  const containerRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={theme}>
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+            // ... all available Locomotive Scroll instance options
+            smartphone: {
+              smooth: true,
+            },
+            tablet: {
+              smooth: true,
+            },
+          }}
+          watch={
+            [
+              //..all the dependencies you want to watch to update the scroll.
+              //  Basicaly, you would want to watch page/location changes
+              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+            ]
+          }
+          containerRef={containerRef}
+        >
+          <AnimatePresence>
+            <main className="App" data-scroll-container ref={containerRef}>
+              <Home />
+            </main>
+          </AnimatePresence>
+        </LocomotiveScrollProvider>
+      </ThemeProvider>
+    </>
   );
 }
 
