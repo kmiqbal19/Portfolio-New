@@ -11,6 +11,7 @@ const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
 `;
 const LogoContainer = styled.div`
   width: 200px;

@@ -5,7 +5,9 @@ import CanvasHeroSection from "../components/CanvasHeroSection/CanvasHeroSection
 const HomeContainer = styled.div`
   width: (100vw);
   min-height: calc(100vh + 400px);
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-color: black;
+  overflow: hidden;
 `;
 // COMPONENT
 function Home() {

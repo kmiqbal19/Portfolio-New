@@ -15,6 +15,7 @@ export const theme = {
   fontxxl: "3rem",
   fontxxxl: "5rem",
   fontBig: "10rem",
+  squareLenghtXsm: "40px",
   squareLenghtSm: "70px",
   squareLenghtLg: "200px",
   squareLenghtXl: "300px",
