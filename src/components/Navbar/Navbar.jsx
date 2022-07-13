@@ -110,12 +110,15 @@ const MobileMenu = styled(motion.div)`
     align-items: center;
     flex-direction: column;
     margin-top: 5rem;
+    position: fixed;
+    top: 10rem;
     li {
       overflow: hidden;
 
       margin: 3rem auto;
       transition: all 0.3s ease;
       cursor: pointer;
+      will-change: transform;
       &:hover {
         transform: skewX(15deg);
       }
@@ -141,6 +144,7 @@ const variants = {
   animate: {
     opacity: 1,
     transition: {
+      delayChildren: 0.5,
       staggerChildren: 0.3,
     },
   },
@@ -204,8 +208,8 @@ function Navbar() {
       <AnimatePresence>
         {clicked && (
           <MobileMenu
-            initial={{ x: "100%" }}
-            animate={{ x: "0%" }}
+            initial={{ height: "0%", skewX: -5 }}
+            animate={{ height: "100%", skewX: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
