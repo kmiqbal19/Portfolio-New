@@ -5,8 +5,10 @@ export const DraggableSquare1 = styled(motion.div)`
   height: ${(props) => props.theme.squareLenghtSm};
   border: 3px solid white;
   position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
+  /* top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
+  left: ${(Math.random() * window.innerWidth) / 2}px; */
+  bottom: 25%;
+  left: 5%;
   cursor: grab;
   transition: box-shadow 1s ease;
 `;
@@ -16,10 +18,12 @@ export const DraggableSquare2 = styled(motion.div)`
   height: ${(props) => props.theme.squareLenghtLg};
   border: 1px solid white;
   position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
+  /* top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
+  left: ${(Math.random() * window.innerWidth) / 2}px; */
+  top: 10%;
+  left: 50%;
   cursor: grab;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,8 +38,11 @@ export const DraggableSquare3 = styled(motion.div)`
   height: ${(props) => props.theme.squareLenghtXsm};
   border: 5px solid white;
   position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
+  /* top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
+  left: ${(Math.random() * window.innerWidth) / 2}px; */
+  top: 45%;
+  right: 10%;
+
   cursor: grab;
   transition: box-shadow 1s ease;
 `;
@@ -44,8 +51,10 @@ export const DraggableCircle = styled(motion.div)`
   height: ${(props) => props.theme.circleDiameter};
   border: 1px solid white;
   position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
+  /* top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
+  left: ${(Math.random() * window.innerWidth) / 2}px; */
+  top: 15%;
+  left: 15%;
   cursor: grab;
   border-radius: 50%;
 `;

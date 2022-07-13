@@ -107,14 +107,14 @@ function CanvasHeroSection() {
       ></DraggableSquare1>
       <DraggableSquare2
         initial={{ scale: 0 }}
-        animate={{ scale: 1, rotate: 210 }}
+        animate={{ scale: 1, rotate: 320 }}
         transition={{ duration: 1.3, delay: 0.5 }}
         drag
         dragElastic={0.7}
         dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
         onDragEnd={handleDragEnd}
       >
-        <span>Move Me</span>
+        <span>Move Us</span>
       </DraggableSquare2>
       <DraggableSquare3
         initial={{ scale: 0 }}
