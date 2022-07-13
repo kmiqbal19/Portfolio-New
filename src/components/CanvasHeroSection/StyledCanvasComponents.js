@@ -50,12 +50,18 @@ export const DraggableCircle = styled(motion.div)`
   border-radius: 50%;
 `;
 export const ShootingSquare1 = styled.div`
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   top: 100px;
   left: -10%;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: azure;
+  }
 `;
 export const ShootingSquare2 = styled.div`
   width: 50px;

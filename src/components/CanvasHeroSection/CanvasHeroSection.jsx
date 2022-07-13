@@ -32,12 +32,15 @@ function CanvasHeroSection() {
       x: function (x) {
         return (x += window.innerWidth);
       },
+
       rotate: 360,
       borderRadius: "50%",
       ease: "Power3.easeOut",
+      boxShadow: "2px 2px 20px red",
       duration: 25,
-      delay: 8,
-      repeat: -1,
+      delay: 3,
+
+      //   repeat: -1,
     });
     gsap.to(shootingSquare2.current, {
       y: function (y) {
@@ -58,7 +61,7 @@ function CanvasHeroSection() {
       borderRadius: "50%",
       ease: "Power3.easeOut",
       duration: 25,
-      delay: 4,
+      delay: 5,
       repeat: -1,
     });
   }, []);
@@ -69,27 +72,19 @@ function CanvasHeroSection() {
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
       dragCircle.current.style.mixBlendMode = "exclusion";
-      console.log("X");
     }
     if (i.offset.x < -10) {
-      dragCircle.current.style.transform =
-        "translateX(-206.4px) translateY(-483.2px) scale(1) translateZ(0px)";
-
       dragCircle.current.style.boxShadow = "0px 0px 50px red";
-      console.log("-X");
     }
-    if (i.offset.y > 40) {
+    if (i.offset.y > 10) {
       dragCircle.current.style.boxShadow = "0px 0px 50px green";
       dragCircle.current.style.borderRadius = "0%";
-      console.log("Y");
     }
     if (i.offset.y < -10) {
       dragCircle.current.style.boxShadow = "0px 0px 50px cyan";
-      console.log("-Y");
     }
   };
   const handlePointerDown = (event) => {
-    console.log(event);
     controls.start(event, { snapToCursor: true });
   };
   return (
@@ -111,7 +106,6 @@ function CanvasHeroSection() {
         onDragEnd={handleDragEnd}
       ></DraggableSquare1>
       <DraggableSquare2
-        onPointerDown={handlePointerDown}
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: 210 }}
         transition={{ duration: 1.3, delay: 0.5 }}
@@ -146,7 +140,11 @@ function CanvasHeroSection() {
         //   bottom: window.innerHeight / 2,
         // }}
       ></DraggableCircle>
-      <ShootingSquare1 ref={shootingSquare1} />
+      <ShootingSquare1
+        title="Get him back!"
+        onPointerDown={handlePointerDown}
+        ref={shootingSquare1}
+      />
       <ShootingSquare2 ref={shootingSquare2} />
       <ShootingSquare3 ref={shootingSquare3} />
     </Canvas>
