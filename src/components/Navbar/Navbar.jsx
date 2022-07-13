@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
-
+import { AnimatePresence } from "framer-motion";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 const Nav = styled(motion.nav)`
   width: 100%;
   height: ${(props) => props.theme.navHeight};
@@ -31,7 +32,7 @@ const ListContainer = styled.ul`
     display: none;
   }
 `;
-const List = styled.a`
+const List = styled.li`
   margin: 0 2rem;
   list-style: none;
   font-size: ${(props) => props.theme.fontxl};
@@ -90,7 +91,7 @@ const Cross = styled.div`
   }
 `;
 
-const MobileMenu = styled(motion.ul)`
+const MobileMenu = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100%;
@@ -113,11 +114,21 @@ const MobileMenu = styled(motion.ul)`
       overflow: hidden;
 
       margin: 3rem auto;
-
-      a {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        transform: skewX(15deg);
+      }
+      span {
         display: inline-block;
         font-size: ${(props) => props.theme.fontxxl};
         color: white;
+        &:hover {
+          color: yellow;
+        }
+        &:active {
+          color: green;
+        }
       }
     }
   }
@@ -149,6 +160,26 @@ const childrenVar = {
 // NAVBAR COMPONENT
 function Navbar() {
   const [clicked, setClicked] = useState(false);
+  const { scroll } = useLocomotiveScroll();
+
+  const handleScroll = (id) => {
+    let elem = document.querySelector(id);
+    setClicked(!clicked);
+    scroll.scrollTo(elem, {
+      // offset: "-100",
+      duration: "2000",
+      easing: [0.25, 0.0, 0.35, 1.0],
+    });
+  };
+  const handleScrollDevice = (id) => {
+    let elem = document.querySelector(id);
+
+    scroll.scrollTo(elem, {
+      // offset: "-100",
+      duration: "2000",
+      easing: [0.25, 0.0, 0.35, 1.0],
+    });
+  };
   return (
     <>
       <Nav
@@ -160,9 +191,9 @@ function Navbar() {
           <img src="https://i.ibb.co/ZHFdJhW/city.png" alt="logo" />
         </LogoContainer>
         <ListContainer>
-          <List href="#projects">projects</List>
-          <List href="#skills">skills</List>
-          <List href="#about">about me</List>
+          <List onClick={() => handleScrollDevice("#projects")}>projects</List>
+          <List onClick={() => handleScrollDevice("#skills")}>skills</List>
+          <List onClick={() => handleScrollDevice("#about")}>about me</List>
         </ListContainer>
         <HamburgerContainer onClick={() => setClicked(true)}>
           <div className="line line-1"></div>
@@ -170,31 +201,32 @@ function Navbar() {
           <div className="line line-3"></div>
         </HamburgerContainer>
       </Nav>
-      {clicked && (
-        <MobileMenu>
-          <Cross onClick={() => setClicked(false)}>
-            <div className="cross-line cross-line-1"></div>
-            <div className="cross-line cross-line-2"></div>
-          </Cross>
-          <motion.ul variants={variants} initial="initial" animate="animate">
-            <li onClick={() => setClicked(false)}>
-              <motion.a variants={childrenVar} href="#projects">
-                projects
-              </motion.a>
-            </li>
-            <li onClick={() => setClicked(false)}>
-              <motion.a variants={childrenVar} href="#skills">
-                skills
-              </motion.a>
-            </li>
-            <li onClick={() => setClicked(false)}>
-              <motion.a variants={childrenVar} href="#about">
-                about
-              </motion.a>
-            </li>
-          </motion.ul>
-        </MobileMenu>
-      )}
+      <AnimatePresence>
+        {clicked && (
+          <MobileMenu
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <Cross onClick={() => setClicked(false)}>
+              <div className="cross-line cross-line-1"></div>
+              <div className="cross-line cross-line-2"></div>
+            </Cross>
+            <motion.ul variants={variants} initial="initial" animate="animate">
+              <li onClick={() => handleScroll("#projects")}>
+                <motion.span variants={childrenVar}>projects</motion.span>
+              </li>
+              <li onClick={() => handleScroll("#skills")}>
+                <motion.span variants={childrenVar}>skills</motion.span>
+              </li>
+              <li onClick={() => handleScroll("#about")}>
+                <motion.span variants={childrenVar}>about</motion.span>
+              </li>
+            </motion.ul>
+          </MobileMenu>
+        )}
+      </AnimatePresence>
     </>
   );
 }
