@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import { theme } from "./styles/Themes.js";
 
@@ -8,8 +8,15 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
 import Home from "./sections/Home";
 import Projects from "./sections/Projects";
+import Preloader from "./components/Preloader/Preloader";
 function App() {
   const containerRef = useRef(null);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 4000);
+  }, []);
   return (
     <>
       <GlobalStyles />
@@ -34,6 +41,7 @@ function App() {
           }
           containerRef={containerRef}
         >
+          {loaded ? null : <Preloader />}
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
               <Home />

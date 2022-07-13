@@ -68,20 +68,20 @@ function CanvasHeroSection() {
 
   const handleDragEnd = (e, i) => {
     if (i.offset.x > 40) {
-      dragCircle.current.style.boxShadow = "0px 0px 50px blue";
+      dragCircle.current.style.boxShadow = "5px 5px 60px blue";
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
       dragCircle.current.style.mixBlendMode = "exclusion";
     }
     if (i.offset.x < -10) {
-      dragCircle.current.style.boxShadow = "0px 0px 50px red";
+      dragCircle.current.style.boxShadow = "5px 5px 60px red";
     }
     if (i.offset.y > 10) {
-      dragCircle.current.style.boxShadow = "0px 0px 50px green";
+      dragCircle.current.style.boxShadow = "5px 5px 60px green";
       dragCircle.current.style.borderRadius = "0%";
     }
     if (i.offset.y < -10) {
-      dragCircle.current.style.boxShadow = "0px 0px 50px cyan";
+      dragCircle.current.style.boxShadow = "5px 5px 60px cyan";
     }
   };
   const handlePointerDown = (event) => {
