@@ -1,54 +1,122 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import {
+  DraggableCircle,
+  DraggableSquare1,
+  DraggableSquare2,
+  ShootingSquare1,
+  ShootingSquare2,
+  ShootingSquare3,
+} from "./StyledCanvasComponents";
+import gsap from "gsap";
 const Canvas = styled.div`
   width: 100%;
   height: calc(100vh - 8rem);
   position: relative;
+  /* overflow: hidden; */
 `;
-const DraggableSquare1 = styled(motion.div)`
-  width: ${(props) => props.theme.squareLenghtSm};
-  height: ${(props) => props.theme.squareLenghtSm};
-  border: 3px solid black;
-  position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
-  cursor: grab;
-`;
-const DraggableSquare2 = styled(motion.div)`
-  width: ${(props) => props.theme.squareLenghtLg};
-  height: ${(props) => props.theme.squareLenghtLg};
-  border: 1px solid black;
-  position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
-  cursor: grab;
-`;
-const DraggableCircle = styled(motion.div)`
-  width: ${(props) => props.theme.circleDiameter};
-  height: ${(props) => props.theme.circleDiameter};
-  border: 1px solid black;
-  position: absolute;
-  top: ${(Math.random() * window.innerHeight - 80) / 2 + 100}px;
-  left: ${(Math.random() * window.innerWidth) / 2}px;
-  cursor: grab;
-  border-radius: 50%;
-`;
+
+// COMPONENT
 function CanvasHeroSection() {
+  const canvas = useRef(null);
+  const shootingSquare1 = useRef(null);
+  const shootingSquare2 = useRef(null);
+  const shootingSquare3 = useRef(null);
+  const dragCircle = useRef(null);
+  useEffect(() => {
+    gsap.to(shootingSquare1.current, {
+      x: function (x) {
+        return (x += window.innerWidth);
+      },
+      rotate: 360,
+      borderRadius: "50%",
+      ease: "Power3.easeOut",
+      duration: 25,
+      delay: 8,
+    });
+    gsap.to(shootingSquare2.current, {
+      y: function (y) {
+        return (y -= window.innerHeight + 100);
+      },
+      rotate: 360,
+      borderRadius: "50%",
+      ease: "Power3.easeOut",
+      duration: 25,
+      delay: 4,
+    });
+    gsap.to(shootingSquare3.current, {
+      x: function (x) {
+        return (x -= window.innerWidth + 100);
+      },
+      rotate: 360,
+      borderRadius: "50%",
+      ease: "Power3.easeOut",
+      duration: 25,
+      delay: 4,
+    });
+  }, []);
+
+  const handleDragEnd = (e, i) => {
+    if (i.offset.x > 40) {
+      dragCircle.current.style.boxShadow = "0px 0px 50px blue";
+      dragCircle.current.style.borderRadius = "50%";
+      dragCircle.current.style.backgroundColor = "red";
+      dragCircle.current.style.mixBlendMode = "difference";
+      console.log("X");
+    }
+    if (i.offset.x < -10) {
+      dragCircle.current.style.boxShadow = "0px 0px 50px red";
+      console.log("-X");
+    }
+    if (i.offset.y > 40) {
+      dragCircle.current.style.boxShadow = "0px 0px 50px green";
+      dragCircle.current.style.borderRadius = "0%";
+      console.log("Y");
+    }
+    if (i.offset.y < -10) {
+      dragCircle.current.style.boxShadow = "0px 0px 50px cyan";
+      console.log("-Y");
+    }
+  };
   return (
-    <Canvas>
+    <Canvas ref={canvas}>
+      <h1 style={{ color: "green" }}>HI how</h1>
       <DraggableSquare1
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotate: -200 }}
+        transition={{ duration: 1, delay: 0.3 }}
         drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.7}
+        dragConstraints={{ left: 500, right: 400, top: 100, bottom: 200 }}
+        onDragEnd={handleDragEnd}
       ></DraggableSquare1>
       <DraggableSquare2
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotate: 210 }}
+        transition={{ duration: 1.3, delay: 0.5 }}
         drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.7}
+        dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
+        onDragEnd={handleDragEnd}
       ></DraggableSquare2>
       <DraggableCircle
+        ref={dragCircle}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, delay: 1 }}
         drag
-        dragConstraints={{ left: 100, right: 100, top: 0, bottom: 0 }}
+        dragElastic={0.01}
+        // dragConstraints={{
+        //   left: window.innerWidth / 2,
+        //   right: window.innerWidth / 2,
+        //   top: window.innerHeight / 2,
+        //   bottom: window.innerHeight / 2,
+        // }}
       ></DraggableCircle>
+      <ShootingSquare1 ref={shootingSquare1} />
+      <ShootingSquare2 ref={shootingSquare2} />
+      <ShootingSquare3 ref={shootingSquare3} />
     </Canvas>
   );
 }
