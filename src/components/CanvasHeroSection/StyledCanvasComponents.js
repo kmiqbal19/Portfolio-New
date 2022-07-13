@@ -93,7 +93,6 @@ export const ShootingSquare3 = styled.div`
 export const TitleContainer = styled.div`
   width: 50%;
   height: 30%;
-  /* border: 1px solid red; */
   color: white;
   position: absolute;
   top: 15%;
@@ -101,11 +100,19 @@ export const TitleContainer = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   pointer-events: none;
   p {
-    font-size: 4rem;
-    font-weight: lighter;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      font-size: 4rem;
+      font-weight: lighter;
+    }
     margin-bottom: 1rem;
   }
-  span {
-    font-size: 12rem;
+  p.designation-hero {
+    overflow: hidden;
+    span {
+      display: inline-block;
+      font-size: 12rem;
+    }
   }
 `;

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { useDragControls } from "framer-motion";
+import { useDragControls, motion } from "framer-motion";
 import {
   DraggableCircle,
   DraggableSquare1,
@@ -90,10 +90,34 @@ function CanvasHeroSection() {
   return (
     <Canvas ref={canvas}>
       <TitleContainer>
-        <p>Khandakar Iqbal</p>
-        <span>Web Development</span>
+        <p>
+          <motion.span
+            initial={{ y: -100, skewX: -30 }}
+            animate={{ y: 0, skewX: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            Khandakar Iqbal
+          </motion.span>
+        </p>
+        <p className="designation-hero">
+          <motion.span
+            initial={{ y: 400, skewX: -30 }}
+            animate={{ y: 0, skewX: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          >
+            Web Development
+          </motion.span>
+        </p>
         <br />
-        <span>Learner</span>
+        <p className="designation-hero">
+          <motion.span
+            initial={{ y: 400, skewX: -30 }}
+            animate={{ y: 0, skewX: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          >
+            Learner
+          </motion.span>
+        </p>
       </TitleContainer>
       <DraggableSquare1
         onPointerDown={(e) => console.log(e)}
