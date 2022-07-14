@@ -59,9 +59,8 @@ const Projects = () => {
       });
       t1.fromTo(
         movableWrapper,
-        { x: 0, backgroundColor: "black" },
+        { x: 0 },
         {
-          backgroundColor: "red",
           scrollTrigger: {
             trigger: fixedContainer,
             start: "top top",
@@ -88,13 +87,6 @@ const Projects = () => {
       {/* <h1 style={{ margin: "7rem 0rem" }}>Projects</h1> */}
       <ProjectsContainer ref={containerRef} id="projects">
         <MovableWrapper ref={movableWrapperRef}>
-          {/* <img src={img2} alt="img" />
-        <img src={img3} alt="img" />
-        <img src={img4} alt="img" />
-        <img src={img5} alt="img" />
-        <a href="www.google.com">
-          <img src={img1} alt="img" />
-        </a> */}
           <SingleProject />
           <SingleProject />
           <SingleProject />

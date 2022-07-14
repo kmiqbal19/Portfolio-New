@@ -5,10 +5,10 @@ import { FiGithub } from "react-icons/fi";
 import { MdOutlinePreview } from "react-icons/md";
 import { motion } from "framer-motion";
 const Project = styled(motion.div)`
-  width: 60vw;
+  width: 70vw;
   height: 75%;
   border: 1px solid black;
-  margin: 0rem 8vw;
+  margin: 0rem 15vw;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -28,7 +28,7 @@ const TitleOverlay = styled.div`
   width: 90%;
   height: 50%;
   /* border: 1px solid red; */
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(30, 40, 100, 0.3);
   position: absolute;
   left: -20%;
   bottom: 0%;
