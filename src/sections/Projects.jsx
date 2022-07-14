@@ -23,6 +23,7 @@ const ProjectsContainer = styled.section`
   /* justify-content: center; */
   align-items: center;
   position: relative;
+  background-color: black;
 `;
 const MovableWrapper = styled(motion.div)`
   height: 100vh;
@@ -58,8 +59,9 @@ const Projects = () => {
       });
       t1.fromTo(
         movableWrapper,
-        { x: 0 },
+        { x: 0, backgroundColor: "black" },
         {
+          backgroundColor: "red",
           scrollTrigger: {
             trigger: fixedContainer,
             start: "top top",
@@ -83,7 +85,7 @@ const Projects = () => {
 
   return (
     <>
-      <h1 style={{ margin: "7rem 0rem" }}>Projects</h1>
+      {/* <h1 style={{ margin: "7rem 0rem" }}>Projects</h1> */}
       <ProjectsContainer ref={containerRef} id="projects">
         <MovableWrapper ref={movableWrapperRef}>
           {/* <img src={img2} alt="img" />

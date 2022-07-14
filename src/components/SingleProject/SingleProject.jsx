@@ -8,10 +8,11 @@ const Project = styled(motion.div)`
   width: 60vw;
   height: 75%;
   border: 1px solid black;
-  margin: 0rem 15vw;
+  margin: 0rem 8vw;
   position: relative;
   display: flex;
   justify-content: flex-end;
+  color: white;
   img {
     position: absolute;
     top: 0;
@@ -23,6 +24,15 @@ const Project = styled(motion.div)`
     z-index: -1;
   }
 `;
+const TitleOverlay = styled.div`
+  width: 90%;
+  height: 50%;
+  /* border: 1px solid red; */
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: -20%;
+  bottom: 0%;
+`;
 const Title = styled.p`
   font-size: calc(5rem + 5vw);
   position: absolute;
@@ -30,21 +40,30 @@ const Title = styled.p`
   bottom: 15%;
   text-transform: uppercase;
 `;
+const BuiltWith = styled.p`
+  width: 60%;
+  font-size: calc(1rem + 1vw);
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+`;
 const LinkContainer = styled.div`
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   /* border: 2px solid red; */
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 const GitLink = styled.a`
   svg {
     width: 50px;
     height: 50px;
-
+    transition: all 0.3s ease;
     &:hover {
-      fill: blue;
+      fill: #010280;
+      color: black;
     }
   }
 `;
@@ -54,29 +73,24 @@ const ProjectLink = styled.a`
   svg {
     width: 50px;
     height: 50px;
-
+    transition: all 0.3s ease;
     &:hover {
-      fill: white;
+      fill: black;
+      width: 55px;
+      height: 55px;
     }
   }
 `;
-const BuiltWith = styled.p`
-  width: 60%;
-  font-size: calc(1rem + 1vw);
-  position: absolute;
-  bottom: 5%;
-  left: 2%;
-`;
+
 function SingleProject() {
   return (
     <Project
-      initial={{ filter: "grayscale(100%)" }}
-      whileInView={{ filter: "grayscale(0%)", scale: 1.08 }}
-      transition={{ duration: 1 }}
+      initial={{ filter: "grayscale(100%)", height: "50%" }}
+      whileInView={{ filter: "grayscale(0%)", height: "75%" }}
+      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: "all" }}
     >
       <img src={img} alt="" />
-      <Title>taskeman</Title>
       <LinkContainer>
         <GitLink href="www.google.com">
           <FiGithub />
@@ -85,6 +99,9 @@ function SingleProject() {
           <MdOutlinePreview />
         </ProjectLink>
       </LinkContainer>
+
+      <TitleOverlay />
+      <Title>taskeman</Title>
       <BuiltWith>
         Built with React, Redux, Framer Motion, Express, MongoDB (MERN Stack)
       </BuiltWith>
