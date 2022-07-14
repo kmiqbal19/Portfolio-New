@@ -7,15 +7,18 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
 import Home from "./sections/Home";
-import Projects from "./sections/Projects";
+import Projects from "./sections/Projects.jsx";
 import Preloader from "./components/Preloader/Preloader";
+
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
+
 function App() {
   const containerRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 4000);
+    }, 4200);
   }, []);
   return (
     <>
@@ -42,6 +45,7 @@ function App() {
           containerRef={containerRef}
         >
           {loaded ? null : <Preloader />}
+          <ScrollTriggerProxy />
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
               <Home />

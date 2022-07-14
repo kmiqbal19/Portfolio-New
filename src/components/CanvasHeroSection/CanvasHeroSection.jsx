@@ -37,8 +37,8 @@ function CanvasHeroSection() {
       borderRadius: "50%",
       ease: "Power3.easeOut",
       boxShadow: "2px 2px 20px red",
-      duration: 25,
-      delay: 3,
+      duration: 20,
+      delay: 9,
 
       //   repeat: -1,
     });
@@ -71,7 +71,7 @@ function CanvasHeroSection() {
       dragCircle.current.style.boxShadow = "5px 5px 60px blue";
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
-      dragCircle.current.style.mixBlendMode = "exclusion";
+      dragCircle.current.style.mixBlendMode = "difference";
     }
     if (i.offset.x < -10) {
       dragCircle.current.style.boxShadow = "5px 5px 60px red";
@@ -90,30 +90,30 @@ function CanvasHeroSection() {
   return (
     <Canvas ref={canvas}>
       <TitleContainer>
-        <p>
+        <p data-scroll data-scroll-speed="-1" className="author-name">
           <motion.span
             initial={{ y: -100, skewX: -30 }}
             animate={{ y: 0, skewX: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ delay: 4.8, duration: 1, ease: "easeOut" }}
           >
             Khandakar Iqbal
           </motion.span>
         </p>
-        <p className="designation-hero">
+        <p data-scroll data-scroll-speed="-1" className="designation-hero">
           <motion.span
             initial={{ y: 400, skewX: -30 }}
             animate={{ y: 0, skewX: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 5.3 }}
           >
             Web Development
           </motion.span>
         </p>
         <br />
-        <p className="designation-hero">
+        <p data-scroll data-scroll-speed="-1" className="designation-hero">
           <motion.span
             initial={{ y: 400, skewX: -30 }}
             animate={{ y: 0, skewX: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 5.6 }}
           >
             Learner
           </motion.span>
@@ -123,7 +123,7 @@ function CanvasHeroSection() {
         onPointerDown={(e) => console.log(e)}
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: -200 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 1, delay: 6 }}
         drag
         dragElastic={0.7}
         dragConstraints={{ left: 500, right: 400, top: 100, bottom: 200 }}
@@ -132,7 +132,7 @@ function CanvasHeroSection() {
       <DraggableSquare2
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: 320 }}
-        transition={{ duration: 1.3, delay: 0.5 }}
+        transition={{ duration: 1.3, delay: 6.3 }}
         drag
         dragElastic={0.7}
         dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
@@ -143,7 +143,7 @@ function CanvasHeroSection() {
       <DraggableSquare3
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: 380 }}
-        transition={{ duration: 1.5, delay: 0.7 }}
+        transition={{ duration: 1.5, delay: 6.8 }}
         drag
         dragElastic={0.7}
         dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
@@ -154,7 +154,7 @@ function CanvasHeroSection() {
         ref={dragCircle}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1.5, delay: 1 }}
+        transition={{ duration: 1.5, delay: 7.2 }}
         drag
         dragElastic={0.9}
         // dragConstraints={{

@@ -57,6 +57,7 @@ export const DraggableCircle = styled(motion.div)`
   left: 15%;
   cursor: grab;
   border-radius: 50%;
+  z-index: 10;
 `;
 export const ShootingSquare1 = styled.div`
   width: 40px;
@@ -99,14 +100,14 @@ export const TitleContainer = styled.div`
   left: 15%;
   font-family: Arial, Helvetica, sans-serif;
   pointer-events: none;
-  p {
+  p.author-name {
     overflow: hidden;
     span {
       display: inline-block;
       font-size: 4rem;
       font-weight: lighter;
     }
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
   p.designation-hero {
     overflow: hidden;

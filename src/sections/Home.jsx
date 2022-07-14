@@ -7,14 +7,13 @@ const HomeContainer = styled.div`
   min-height: calc(100vh + 400px);
   /* border: 1px solid red; */
   background-color: black;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 // COMPONENT
 function Home() {
   return (
     <HomeContainer>
       <Navbar />
-
       <CanvasHeroSection />
     </HomeContainer>
   );

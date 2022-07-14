@@ -190,7 +190,7 @@ function Navbar() {
       <Nav
         initial={{ y: "-100%" }}
         animate={{ y: "0%" }}
-        transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+        transition={{ delay: 4.5, ease: "backOut", duration: 0.5 }}
       >
         <LogoContainer>
           <img src="https://i.ibb.co/ZHFdJhW/city.png" alt="logo" />
