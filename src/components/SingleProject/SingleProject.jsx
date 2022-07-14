@@ -61,6 +61,7 @@ const GitLink = styled.a`
     width: 50px;
     height: 50px;
     transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.5);
     &:hover {
       fill: #010280;
       color: black;
@@ -74,8 +75,9 @@ const ProjectLink = styled.a`
     width: 50px;
     height: 50px;
     transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.5);
     &:hover {
-      fill: black;
+      fill: white;
       width: 55px;
       height: 55px;
     }
