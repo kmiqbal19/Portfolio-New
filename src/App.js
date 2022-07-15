@@ -14,6 +14,7 @@ import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 
 import Skills from "./sections/Skills";
 import About from "./sections/About.js";
+import Footer from "./sections/Footer";
 
 function App() {
   const containerRef = useRef(null);
@@ -55,6 +56,7 @@ function App() {
               <Projects />
               <Skills />
               <About />
+              <Footer />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

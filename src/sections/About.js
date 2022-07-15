@@ -20,11 +20,11 @@ const Section = styled.section`
 
 const Overlay = styled.div`
   position: absolute;
-  top: 0%;
+  top: -1%;
   right: 8%;
 
   width: 38vw;
-  height: 100vh;
+  height: 105vh;
 
   border-top: 14rem solid black;
   border-bottom: 14rem solid black;
@@ -49,7 +49,7 @@ const Container = styled.div`
   align-items: center;
 `;
 const ImageContainer = styled.img`
-  width: 30vw;
+  width: 32vw;
   height: ${window.innerHeight}px;
   object-fit: cover;
 `;
@@ -57,7 +57,7 @@ const ImageContainer = styled.img`
 const AboutTextContainer = styled.div`
   width: 40vw;
   height: 60vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-right: 10rem;
   position: absolute;
   top: 50%;
@@ -70,7 +70,7 @@ const AboutTextContainer = styled.div`
   padding: 4rem;
   p {
     font-size: 2rem;
-    color: white;
+    color: black;
     line-height: 1.5;
   }
 `;
@@ -91,7 +91,7 @@ const About = () => {
         scrollTrigger: {
           trigger: element,
           start: "top top",
-          end: "bottom+=100% top-=100%",
+          end: "bottom+=67% top-=67%",
           // end: "top top",
 
           scroller: ".App", // locomotive element
@@ -111,7 +111,7 @@ const About = () => {
         },
 
         {
-          y: "-100%",
+          y: "-67%",
           scrollTrigger: {
             trigger: scrollingElement,
             start: "top top",
