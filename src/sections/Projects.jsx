@@ -1,16 +1,9 @@
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useLayoutEffect } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
-
 import { motion } from "framer-motion";
 import SingleProject from "../components/SingleProject/SingleProject.jsx";
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
-import img4 from "../assets/Images/4.webp";
-import img5 from "../assets/Images/5.webp";
 
 const ProjectsContainer = styled.section`
   min-height: 100vh;
@@ -67,7 +60,7 @@ const Projects = () => {
             end: pinWidth,
             scroller: ".App",
             scrub: true,
-            markers: true,
+            // markers: true,
           },
           x: -pinWidth + window.innerWidth,
         }

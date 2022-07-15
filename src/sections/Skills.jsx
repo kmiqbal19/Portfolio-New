@@ -1,14 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import {
   MongoDBContainer,
   ReactContainer,
   NodeContainer,
   ReduxContainer,
   JSContainer,
-  SkillsInText,
+  HtmlContainer,
+  CssContainer,
+  SkillsQuote,
+  SkillTitleContainer,
 } from "../components/SkillsStyles/SkillsStyles";
-import { SiReact, SiMongodb, SiRedux, SiJavascript } from "react-icons/si";
+import {
+  SiReact,
+  SiMongodb,
+  SiRedux,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 const SkillsContainer = styled.div`
   width: 100%;
@@ -21,10 +32,35 @@ const SkillsContainer = styled.div`
 function Skills() {
   return (
     <SkillsContainer>
+      <SkillTitleContainer>
+        <div>
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+          >
+            Tools
+          </motion.span>
+        </div>
+        <div>
+          <motion.span
+            initial={{
+              x: 70,
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+          >
+            & Tech
+          </motion.span>
+        </div>
+      </SkillTitleContainer>
+
       <ReactContainer
         initial={{ scale: 0.7 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         <SiReact />
         <p data-scroll data-scroll-speed="4">
@@ -34,7 +70,7 @@ function Skills() {
       <NodeContainer
         initial={{ scale: 0.8 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 1 }}
       >
         <GrNode />
         <p data-scroll data-scroll-speed="-3">
@@ -63,10 +99,22 @@ function Skills() {
           JavaScript
         </p>
       </JSContainer>
-      <SkillsInText>
-        I also have knowledge of HTML5, CSS3, Sass, GSAP, Framer Motion, Basic
-        Pug, Canvas, Python{" "}
-      </SkillsInText>
+      <HtmlContainer>
+        <SiHtml5 />
+        <p data-scroll data-scroll-speed="-3">
+          HTML
+        </p>
+      </HtmlContainer>
+      <CssContainer>
+        <SiCss3 />
+        <p
+          data-scroll
+          data-scroll-speed="-2"
+          data-scroll-direction="horizontal"
+        >
+          CSS
+        </p>
+      </CssContainer>
     </SkillsContainer>
   );
 }

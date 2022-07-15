@@ -125,8 +125,8 @@ export const JSContainer = styled(motion.div)`
   height: 350px;
   /* border: 1px solid blue; */
   position: absolute;
-  left: 10%;
-  bottom: 25%;
+  left: 35%;
+  bottom: 28%;
   color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   svg {
@@ -141,7 +141,74 @@ export const JSContainer = styled(motion.div)`
     font-size: 10rem;
   }
 `;
-export const SkillsInText = styled(motion.p)`
+export const HtmlContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Roboto", sans-serif;
+  svg {
+    width: 70%;
+    height: 80%;
+    color: #e56717;
+  }
+  p {
+    position: absolute;
+    bottom: -10%;
+    mix-blend-mode: excursion;
+    font-size: 8rem;
+  }
+`;
+export const CssContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: 25%;
+  bottom: 5%;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Roboto", sans-serif;
+  svg {
+    width: 60%;
+    height: 70%;
+    color: #0080ff;
+  }
+  p {
+    position: absolute;
+    top: -10%;
+    mix-blend-mode: excursion;
+    font-size: 7rem;
+  }
+`;
+export const SkillTitleContainer = styled.div`
+  width: 400px;
+  /* border: 1px solid red; */
+  color: white;
+  margin-left: 5rem;
+  div {
+    overflow: hidden;
+  }
+  span:nth-child(1) {
+    display: block;
+    font-size: 5rem;
+  }
+  span:nth-child(2) {
+    font-size: 5rem;
+    margin-left: 10rem;
+  }
+`;
+export const SkillsQuote = styled(motion.p)`
   font-size: 3rem;
   color: white;
   width: 70%;
