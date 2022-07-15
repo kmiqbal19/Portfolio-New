@@ -29,10 +29,18 @@ const SkillsContainer = styled.div`
   background-color: black;
   padding-top: 10rem;
 `;
+const FixLine = styled.div`
+  width: 100vw;
+  height: 1rem;
+  background-color: red;
+  position: absolute;
+  top: -0.5rem;
+`;
 
 function Skills() {
   return (
     <SkillsContainer>
+      <FixLine />
       <SkillTitleContainer>
         <div>
           <motion.span
