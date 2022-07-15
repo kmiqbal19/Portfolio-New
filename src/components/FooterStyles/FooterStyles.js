@@ -59,12 +59,38 @@ export const SocialIconsContainer = styled.div`
         &:hover {
           transform: scale(1.2);
         }
-        &:nth-child(1) {
-          &:hover {
-            color: red;
-          }
         }
+        &:nth-child(1){
+            svg{
+                &:hover{
+                    color: navy;
+                }
+            }
+        }
+        &:nth-child(2){
+            svg{
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+        &:nth-child(3){
+            svg{
+                &:hover{
+                    color: green;
+                }
+            }
+        }
+        &:nth-child(4){
+            svg{
+                &:hover{
+                    color: blue;
+                }
+            }
+        }
+
       }
+
     }
   }
   &:hover {
@@ -83,6 +109,7 @@ export const FooterTextsContainer = styled.div`
   justify-content: flex-end;
   position: relative;
   p {
+    letter-spacing: 0.5px;
     color: white;
     font-size: 1.5rem;
     text-align: right;
@@ -101,6 +128,7 @@ export const FooterTextsContainer = styled.div`
     right: -2rem;
     background-color: rgba(255, 200, 155, 0.2);
     li {
+      letter-spacing: 0.5px;
       list-style: none;
       margin: 1rem;
       color: white;
