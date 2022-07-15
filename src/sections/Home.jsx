@@ -29,6 +29,7 @@ const SelectedProjectsTitle = styled.div`
 
   p {
     font-size: 8rem;
+    font-family: "Ubuntu", sans-serif;
     color: white;
   }
 `;
@@ -48,9 +49,9 @@ function Home() {
       <SelectedProjectsTitle>
         <div>
           <motion.p
-            initial={{ y: 70 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
             Selected
           </motion.p>
@@ -58,9 +59,9 @@ function Home() {
         <br />
         <div>
           <motion.p
-            initial={{ y: 80 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             style={{ marginLeft: "10rem" }}
           >
             Projects

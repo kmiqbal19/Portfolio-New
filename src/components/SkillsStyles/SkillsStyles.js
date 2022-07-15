@@ -197,15 +197,16 @@ export const SkillTitleContainer = styled.div`
   color: white;
   margin-left: 5rem;
   color: rgba(255, 255, 255, 0.9);
+  font-family: "Ubuntu", sans-serif;
   div {
     overflow: hidden;
   }
   span:nth-child(1) {
     display: block;
-    font-size: 5rem;
+    font-size: 8rem;
   }
   span:nth-child(2) {
-    font-size: 5rem;
+    font-size: 8rem;
     margin-left: 10rem;
   }
 `;
@@ -213,9 +214,10 @@ export const SkillsQuote = styled(motion.p)`
   position: absolute;
   font-size: 2rem;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.9);
-  width: 28%;
+  color: rgba(255, 255, 255, 0.5);
+  width: 400px;
   line-height: 1.5;
   top: 50%;
   left: 40%;
+  text-align: left;
 `;

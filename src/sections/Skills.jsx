@@ -69,7 +69,7 @@ function Skills() {
       <ReactContainer
         initial={{ scale: 0.7 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 1 }}
       >
         <SiReact />
         <p data-scroll data-scroll-speed="4">
@@ -128,7 +128,11 @@ function Skills() {
           CSS
         </p>
       </CssContainer>
-      <SkillsQuote>
+      <SkillsQuote
+      // initial={{ scale: 0.7, opacity: 0.5 }}
+      // whileInView={{ scale: 1, opacity: 1 }}
+      // transition={{ duration: 1, ease: "backInOut" }}
+      >
         <q>
           "Anyone who only understands chemistry, doesn’t even understand that
           correctly."
