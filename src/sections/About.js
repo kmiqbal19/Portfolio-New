@@ -13,65 +13,67 @@ const Section = styled.section`
   width: 100vw;
   margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
 
-  background-color: yellow;
+  background-color: red;
 `;
 
 const Overlay = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30vw;
-  height: 90vh;
+  top: 0%;
+  right: 8%;
 
-  box-shadow: 0 0 0 4vw ${(props) => props.theme.text};
-  border: 3px solid ${(props) => props.theme.body};
+  width: 38vw;
+  height: 100vh;
+
+  border-top: 14rem solid black;
+  border-bottom: 14rem solid black;
+  border-left: 7rem solid black;
+  border-right: 7rem solid black;
+
   z-index: 11;
 `;
 
 const Container = styled.div`
   position: absolute;
   top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 25vw;
-  height: auto;
+  right: 11%;
 
+  width: 32vw;
+  height: auto;
+  /* border: 2px solid black; */
   /* width: 65%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
+const ImageContainer = styled.img`
+  width: 30vw;
+  height: ${window.innerHeight}px;
+  object-fit: cover;
+`;
 
-const Item = styled.div`
+const AboutTextContainer = styled.div`
+  width: 40vw;
+  height: 60vh;
+  border: 1px solid black;
+  margin-right: 10rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
-  img {
-    width: 100%;
-    height: auto;
-    z-index: 5;
+  padding: 4rem;
+  p {
+    font-size: 2rem;
+    color: white;
+    line-height: 1.5;
   }
 `;
-
-const Product = ({ img, title = "" }) => {
-  return (
-    <Item>
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-    </Item>
-  );
-};
-
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -90,6 +92,8 @@ const About = () => {
           trigger: element,
           start: "top top",
           end: "bottom+=100% top-=100%",
+          // end: "top top",
+
           scroller: ".App", // locomotive element
           scrub: true,
           pin: true,
@@ -111,11 +115,11 @@ const About = () => {
           scrollTrigger: {
             trigger: scrollingElement,
             start: "top top",
-            end: "bottom top",
+            end: "bottom bottom",
             scroller: ".App", // locomotive element
             scrub: true,
 
-            //   markers:true,
+            // markers: true,
           },
           // we have to increase scrolling height of this section same as the scrolling element width
         }
@@ -132,14 +136,23 @@ const About = () => {
 
   return (
     <Section ref={ref} id="new-arrival">
+      <AboutTextContainer>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.
+        </p>
+      </AboutTextContainer>
+
       <Overlay />
 
       <Container ref={ScrollingRef}>
-        <Product img={img1} title="Denim" />
-
-        <Product img={img2} title="Cool Dresses" />
-        <Product img={img3} title="Jackets" />
-        <Product img={img4} title="T-shirts" />
+        <ImageContainer src={img1} alt="1" />
+        <ImageContainer src={img2} alt="2" />
+        <ImageContainer src={img3} alt="2" />
       </Container>
     </Section>
   );
