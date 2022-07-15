@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import CanvasHeroSection from "../components/CanvasHeroSection/CanvasHeroSection.jsx";
 const HomeContainer = styled.div`
   width: (100vw);
-  min-height: calc(100vh + 400px);
+  min-height: 180vh;
   /* border: 1px solid red; */
   background-color: black;
   position: relative;

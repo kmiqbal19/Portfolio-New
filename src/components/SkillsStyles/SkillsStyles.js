@@ -9,8 +9,8 @@ export const ReactContainer = styled(motion.div)`
   height: 300px;
   /* border: 1px solid blue; */
   position: absolute;
-  left: 35%;
-  top: 5%;
+  right: 30%;
+  top: 15%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
@@ -48,8 +48,8 @@ export const NodeContainer = styled(motion.div)`
   height: 250px;
   /* border: 1px solid blue; */
   position: absolute;
-  right: 20%;
-  top: 30%;
+  right: 10%;
+  top: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
@@ -186,9 +186,9 @@ export const CssContainer = styled(motion.div)`
   }
   p {
     position: absolute;
-    top: -20%;
+    top: 10%;
     mix-blend-mode: excursion;
-    font-size: 7rem;
+    font-size: 10rem;
   }
 `;
 export const SkillTitleContainer = styled.div`

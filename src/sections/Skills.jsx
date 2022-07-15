@@ -23,7 +23,7 @@ import {
 import { GrNode } from "react-icons/gr";
 const SkillsContainer = styled.div`
   width: 100%;
-  min-height: 200vh;
+  min-height: 250vh;
   position: relative;
   /* border: 2px solid red; */
   background-color: black;
