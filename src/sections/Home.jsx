@@ -7,6 +7,14 @@ const HomeContainer = styled.div`
   min-height: calc(100vh + 400px);
   /* border: 1px solid red; */
   background-color: black;
+  position: relative;
+`;
+const FixGrayLine = styled.div`
+  width: 100vw;
+  height: 1rem;
+  background-color: black;
+  position: absolute;
+  bottom: -0.5rem;
 `;
 // COMPONENT
 function Home() {
@@ -14,6 +22,7 @@ function Home() {
     <HomeContainer>
       <Navbar />
       <CanvasHeroSection />
+      <FixGrayLine />
     </HomeContainer>
   );
 }
