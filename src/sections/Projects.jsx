@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import SingleProject from "../components/SingleProject/SingleProject.jsx";
 
-const ProjectsContainer = styled.section`
+const ProjectsContainer = styled.div`
   min-height: 100vh;
   height: auto;
   width: 100vw;
@@ -52,8 +52,9 @@ const Projects = () => {
       });
       t1.fromTo(
         movableWrapper,
-        { x: 0 },
+        { x: 0, backgroundColor: "black" },
         {
+          backgroundColor: "red",
           scrollTrigger: {
             trigger: fixedContainer,
             start: "top top",

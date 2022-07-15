@@ -72,7 +72,7 @@ const Product = ({ img, title = "" }) => {
   );
 };
 
-const NewArrival = () => {
+const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const ref = useRef(null);
@@ -145,4 +145,4 @@ const NewArrival = () => {
   );
 };
 
-export default NewArrival;
+export default About;

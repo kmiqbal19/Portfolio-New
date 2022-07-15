@@ -27,6 +27,7 @@ const SkillsContainer = styled.div`
   position: relative;
   /* border: 2px solid red; */
   background-color: black;
+  padding-top: 10rem;
 `;
 
 function Skills() {

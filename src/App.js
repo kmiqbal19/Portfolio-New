@@ -11,8 +11,9 @@ import Projects from "./sections/Projects.jsx";
 import Preloader from "./components/Preloader/Preloader";
 
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
-import NewArrival from "./sections/NewArrival.js";
+
 import Skills from "./sections/Skills";
+import About from "./sections/About.js";
 
 function App() {
   const containerRef = useRef(null);
@@ -51,9 +52,9 @@ function App() {
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
               <Home />
-              {/* <Projects /> */}
+              <Projects />
               <Skills />
-              {/* <NewArrival /> */}
+              <About />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

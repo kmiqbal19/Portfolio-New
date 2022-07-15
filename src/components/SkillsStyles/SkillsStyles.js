@@ -9,8 +9,8 @@ export const ReactContainer = styled(motion.div)`
   height: 300px;
   /* border: 1px solid blue; */
   position: absolute;
-  left: 25%;
-  top: 2%;
+  left: 35%;
+  top: 5%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
