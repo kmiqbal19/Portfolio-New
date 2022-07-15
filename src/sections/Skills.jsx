@@ -93,7 +93,11 @@ function Skills() {
           Redux
         </p>
       </ReduxContainer>
-      <JSContainer>
+      <JSContainer
+        initial={{ scale: 0.95 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
+      >
         <SiJavascript />
         <p data-scroll data-scroll-speed="-2">
           JavaScript
@@ -115,6 +119,13 @@ function Skills() {
           CSS
         </p>
       </CssContainer>
+      <SkillsQuote>
+        <q>
+          "Anyone who only understands chemistry, doesn’t even understand that
+          correctly."
+        </q>
+        <br />-<em>Georg Christoph Lichtenberg (German physicist)</em>
+      </SkillsQuote>
     </SkillsContainer>
   );
 }
