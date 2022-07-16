@@ -41,6 +41,14 @@ export const DraggableSquare2 = styled(motion.div)`
   @media screen and (max-width: 1100px) {
     left: 65%;
   }
+  @media screen and (max-width: 950px) {
+    width: calc(100px + 5vw);
+    height: calc(100px + 5vw);
+  }
+  @media screen and (max-width: 750px) {
+    top: 65%;
+    left: 40%;
+  }
 `;
 export const DraggableSquare3 = styled(motion.div)`
   width: ${(props) => props.theme.squareLenghtXsm};
@@ -73,6 +81,10 @@ export const DraggableSquare4 = styled(motion.div)`
     width: 150px;
     height: 150px;
   }
+  @media screen and (max-width: 750px) {
+    bottom: 70%;
+    right: 5%;
+  }
 `;
 // The Main Draggable Circle
 export const DraggableCircle = styled(motion.div)`
@@ -98,6 +110,10 @@ export const DraggableCircle = styled(motion.div)`
   @media screen and (max-width: 900px) {
     width: 400px;
     height: 400px;
+  }
+  @media screen and (max-width: 750px) {
+    width: calc(200px + 20vw);
+    height: calc(200px + 20vw);
   }
 `;
 // Responsible for draggable div position reset
