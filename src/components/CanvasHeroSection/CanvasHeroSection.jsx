@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { useDragControls, motion } from "framer-motion";
 import {
@@ -21,6 +21,10 @@ const Canvas = styled.div`
 
 // COMPONENT
 function CanvasHeroSection() {
+  const [dragLeft, setDragLeft] = useState(500);
+  const [dragRight, setDragRight] = useState(400);
+  const [dragTop, setDragTop] = useState(200);
+  const [dragBottom, setDragBottom] = useState(100);
   const canvas = useRef(null);
   const shootingSquare1 = useRef(null);
   const shootingSquare2 = useRef(null);
@@ -28,6 +32,13 @@ function CanvasHeroSection() {
   const dragCircle = useRef(null);
   const controls = useDragControls();
   useEffect(() => {
+    // Set the drag contraints for mobile devices
+    if (window.innerWidth < 650) {
+      setDragLeft(100);
+      setDragRight(50);
+      setDragTop(100);
+      setDragBottom(50);
+    }
     // This square is responsible for draggable square all over the screen
     gsap.to(shootingSquare1.current, {
       x: function (x) {
@@ -66,20 +77,20 @@ function CanvasHeroSection() {
 
   const handleDragEnd = (e, i) => {
     if (i.offset.x > 40) {
-      dragCircle.current.style.boxShadow = "5px 5px 60px blue";
+      dragCircle.current.style.boxShadow = "5px 5px 80px blue";
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
       dragCircle.current.style.mixBlendMode = "difference";
     }
     if (i.offset.x < -10) {
-      dragCircle.current.style.boxShadow = "5px 5px 60px red";
+      dragCircle.current.style.boxShadow = "5px 5px 80px red";
     }
     if (i.offset.y > 10) {
-      dragCircle.current.style.boxShadow = "5px 5px 60px green";
+      dragCircle.current.style.boxShadow = "5px 5px 80px green";
       dragCircle.current.style.borderRadius = "0%";
     }
     if (i.offset.y < -10) {
-      dragCircle.current.style.boxShadow = "5px 5px 60px cyan";
+      dragCircle.current.style.boxShadow = "5px 5px 80px cyan";
     }
   };
   const handlePointerDown = (event) => {
@@ -124,7 +135,12 @@ function CanvasHeroSection() {
         transition={{ duration: 1, delay: 6 }}
         drag
         dragElastic={0.7}
-        dragConstraints={{ left: 500, right: 400, top: 100, bottom: 200 }}
+        dragConstraints={{
+          left: dragLeft,
+          right: dragRight,
+          top: dragTop,
+          bottom: dragBottom,
+        }}
         onDragEnd={handleDragEnd}
       />
       <DraggableSquare2
@@ -133,7 +149,12 @@ function CanvasHeroSection() {
         transition={{ duration: 1.3, delay: 6.3 }}
         drag
         dragElastic={0.7}
-        dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
+        dragConstraints={{
+          left: dragLeft,
+          right: dragRight,
+          top: dragTop,
+          bottom: dragBottom,
+        }}
         onDragEnd={handleDragEnd}
       >
         <span>Move Us</span>
@@ -144,7 +165,12 @@ function CanvasHeroSection() {
         transition={{ duration: 1.5, delay: 6.8 }}
         drag
         dragElastic={0.7}
-        dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
+        dragConstraints={{
+          left: dragLeft,
+          right: dragRight,
+          top: dragTop,
+          bottom: dragBottom,
+        }}
         onDragEnd={handleDragEnd}
       />
       <DraggableSquare4
@@ -153,7 +179,12 @@ function CanvasHeroSection() {
         transition={{ duration: 1.5, delay: 8 }}
         drag
         dragElastic={0.7}
-        dragConstraints={{ left: 300, right: 200, top: 100, bottom: 100 }}
+        dragConstraints={{
+          left: dragLeft,
+          right: dragRight,
+          top: dragTop,
+          bottom: dragBottom,
+        }}
         onDragEnd={handleDragEnd}
       />
       <DraggableCircle
