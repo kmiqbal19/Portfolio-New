@@ -53,8 +53,8 @@ function App() {
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
               <Home />
-              <Projects />
-              <Skills />
+              {/* <Projects /> */}
+              {/* <Skills /> */}
               <About />
               <Footer />
             </main>

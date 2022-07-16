@@ -37,7 +37,7 @@ const SelectedProjectsTitle = styled.div`
   }
 
   p {
-    font-size: calc(5rem + 3vw);
+    font-size: calc(3rem + 3vw);
     font-family: "Ubuntu", sans-serif;
     color: white;
     @media screen and (max-width: 500px) {
