@@ -8,9 +8,6 @@ const HomeContainer = styled.div`
   min-height: 180vh;
   background-color: black;
   position: relative;
-  /* @media screen and (min-width: 1701px) {
-    min-height: 150vh;
-  } */
 `;
 const FixGrayLine = styled.div`
   width: 100vw;
@@ -20,19 +17,31 @@ const FixGrayLine = styled.div`
   bottom: -0.5rem;
 `;
 const SelectedProjectsTitle = styled.div`
-  width: 400px;
+  width: 50vw;
   /* border: 1px solid red; */
   position: absolute;
   bottom: 2%;
   left: 5%;
+  @media screen and (max-width: 1500px) {
+    bottom: 5%;
+  }
+  /* @media screen and (max-width: 950px) {
+    bottom: 15%;
+  } */
+  @media screen and (max-width: 750px) {
+    width: 90vw;
+  }
   div {
     overflow: hidden;
   }
 
   p {
-    font-size: 8rem;
+    font-size: calc(5rem + 3vw);
     font-family: "Ubuntu", sans-serif;
     color: white;
+    /* @media screen and (max-width: 750px) {
+      font-size: calc(3rem + 3vw);
+    } */
   }
 `;
 const AnimatedLine = styled(motion.span)`
@@ -61,7 +70,7 @@ function Home() {
         <br />
         <div>
           <motion.p
-            initial={{ y: 80, opacity: 0 }}
+            initial={{ y: 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             style={{ marginLeft: "10rem" }}
@@ -72,7 +81,7 @@ function Home() {
       </SelectedProjectsTitle>
       <AnimatedLine
         initial={{ width: "0%" }}
-        whileInView={{ width: "60%" }}
+        whileInView={{ width: `${window.innerWidth < 950 ? 30 : 50}%` }}
         transition={{ duration: 2, ease: "backInOut" }}
       />
       <FixGrayLine />
