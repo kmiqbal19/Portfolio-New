@@ -18,7 +18,7 @@ function Footer() {
         <LetsWorkTextContainer>
           <div>
             <motion.p
-              initial={{ y: 70, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             >
@@ -28,10 +28,9 @@ function Footer() {
           <br />
           <div>
             <motion.p
-              initial={{ y: 80, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              style={{ marginLeft: "20rem" }}
             >
               Together
             </motion.p>
