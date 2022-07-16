@@ -105,28 +105,28 @@ export const SocialIconsContainer = styled.div`
       &:nth-child(1) {
         svg {
           &:hover {
-            color: navy;
+            color: #7600bc;
           }
         }
       }
       &:nth-child(2) {
         svg {
           &:hover {
-            color: red;
+            color: #ea4335;
           }
         }
       }
       &:nth-child(3) {
         svg {
           &:hover {
-            color: green;
+            color: #4fce5d;
           }
         }
       }
       &:nth-child(4) {
         svg {
           &:hover {
-            color: blue;
+            color: #0066ff;
           }
         }
       }
