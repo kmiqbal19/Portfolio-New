@@ -29,9 +29,9 @@ const SelectedProjectsTitle = styled.div`
   @media screen and (max-width: 750px) {
     width: 90vw;
   }
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     bottom: 4%;
-  }
+  } */
   div {
     overflow: hidden;
   }
@@ -40,9 +40,9 @@ const SelectedProjectsTitle = styled.div`
     font-size: calc(5rem + 3vw);
     font-family: "Ubuntu", sans-serif;
     color: white;
-    /* @media screen and (max-width: 750px) {
-      font-size: calc(3rem + 3vw);
-    } */
+    @media screen and (max-width: 500px) {
+      font-size: calc(4rem + 3vw);
+    }
   }
 `;
 const AnimatedLine = styled(motion.span)`

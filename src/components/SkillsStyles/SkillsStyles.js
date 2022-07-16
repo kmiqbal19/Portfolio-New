@@ -12,7 +12,13 @@ export const ReactContainer = styled(motion.div)`
   top: 15%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
-
+  @media screen and (max-width: 850px) {
+    width: calc(10rem + 6vw);
+    height: calc(10rem + 6vw);
+  }
+  @media screen and (max-width: 480px) {
+    right: 20%;
+  }
   svg {
     width: 70%;
     height: 70%;
@@ -36,6 +42,9 @@ export const ReactContainer = styled(motion.div)`
     bottom: 10%;
     mix-blend-mode: excursion;
     font-size: calc(10rem + 3vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(7rem + 3vw);
+    }
   }
 `;
 
@@ -51,6 +60,14 @@ export const NodeContainer = styled(motion.div)`
   top: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(8rem + 6vw);
+    height: calc(8rem + 6vw);
+  }
+  @media screen and (max-width: 480px) {
+    top: 38%;
+    right: 15%;
+  }
   svg {
     width: 80%;
     height: 80%;
@@ -75,6 +92,14 @@ export const MongoDBContainer = styled(motion.div)`
   bottom: 13%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(15rem + 5vw);
+    height: calc(15rem + 5vw);
+    right: 20%;
+  }
+  @media screen and (max-width: 480px) {
+    right: 10%;
+  }
   svg {
     width: 80%;
     height: 100%;
@@ -86,6 +111,9 @@ export const MongoDBContainer = styled(motion.div)`
     left: -10%;
     mix-blend-mode: excursion;
     font-size: calc(8rem + 2vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(4rem + 2vw);
+    }
   }
 `;
 export const ReduxContainer = styled(motion.div)`
@@ -100,6 +128,14 @@ export const ReduxContainer = styled(motion.div)`
   bottom: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(7rem + 3vw);
+    height: calc(7rem + 3vw);
+  }
+  @media screen and (max-width: 480px) {
+    right: 15%;
+    bottom: 38%;
+  }
   svg {
     width: 100%;
     height: 100%;
@@ -111,6 +147,9 @@ export const ReduxContainer = styled(motion.div)`
     right: -10%;
     mix-blend-mode: excursion;
     font-size: calc(7rem + 2vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(5rem + 2vw);
+    }
   }
 `;
 export const JSContainer = styled(motion.div)`
@@ -120,12 +159,19 @@ export const JSContainer = styled(motion.div)`
   flex-direction: column;
   width: calc(28rem + 5vw);
   height: calc(28rem + 5vw);
-
   position: absolute;
   left: 10%;
   top: 28%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(15rem + 6vw);
+    height: calc(15rem + 6vw);
+  }
+  @media screen and (max-width: 480px) {
+    top: 24%;
+    left: 13%;
+  }
   svg {
     width: 80%;
     height: 80%;
@@ -136,6 +182,9 @@ export const JSContainer = styled(motion.div)`
     bottom: 0%;
     mix-blend-mode: excursion;
     font-size: calc(8rem + 2vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(5rem + 2vw);
+    }
   }
 `;
 export const HtmlContainer = styled(motion.div)`
@@ -161,6 +210,9 @@ export const HtmlContainer = styled(motion.div)`
     bottom: -10%;
     mix-blend-mode: excursion;
     font-size: calc(7rem + 3vw);
+    @media screen and (max-width: 480px) {
+      font-size: calc(5rem + 3vw);
+    }
   }
 `;
 export const CssContainer = styled(motion.div)`
@@ -170,13 +222,19 @@ export const CssContainer = styled(motion.div)`
   flex-direction: column;
   width: calc(15rem + 5vw);
   height: calc(15rem + 5vw);
-
   position: absolute;
   left: 10%;
   bottom: 25%;
-
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(9rem + 5vw);
+    height: calc(9rem + 5vw);
+  }
+  @media screen and (max-width: 480px) {
+    left: 15%;
+    bottom: 25%;
+  }
   svg {
     width: 80%;
     height: 90%;
@@ -187,24 +245,32 @@ export const CssContainer = styled(motion.div)`
     top: 10%;
     mix-blend-mode: excursion;
     font-size: calc(10rem + 2vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(6rem + 2vw);
+    }
   }
 `;
 export const SkillTitleContainer = styled.div`
-  width: 400px;
-  /* border: 1px solid red; */
+  width: calc(400px + 5vw);
   color: white;
   margin-left: 5rem;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Ubuntu", sans-serif;
+  font-size: calc(5rem + 2vw);
+  @media screen and (max-width: 850px) {
+    font-size: calc(4rem + 3vw);
+  }
+  @media screen and (max-width: 480px) {
+    font-size: calc(4rem + 2vw);
+    margin-left: 2.5rem;
+  }
   div {
     overflow: hidden;
   }
   span:nth-child(1) {
     display: block;
-    font-size: 8rem;
   }
   span:nth-child(2) {
-    font-size: 8rem;
     margin-left: 10rem;
   }
 `;
@@ -219,4 +285,7 @@ export const SkillsQuote = styled(motion.p)`
   left: 50%;
   transform: translateX(-50%);
   text-align: left;
+  @media screen and (max-width: 480px) {
+    width: 300px;
+  }
 `;

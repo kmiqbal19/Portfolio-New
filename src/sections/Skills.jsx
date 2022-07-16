@@ -25,9 +25,12 @@ const SkillsContainer = styled.div`
   width: 100%;
   min-height: 250vh;
   position: relative;
-  /* border: 2px solid red; */
+
   background-color: black;
   padding-top: 10rem;
+  @media screen and (max-width: 850px) {
+    padding-top: 5rem;
+  }
 `;
 const FixLine = styled.div`
   width: 100vw;
@@ -108,7 +111,7 @@ function Skills() {
         transition={{ duration: 0.3, delay: 0.4 }}
       >
         <SiJavascript />
-        <p data-scroll data-scroll-speed="-2">
+        <p data-scroll data-scroll-speed="2">
           JavaScript
         </p>
       </JSContainer>
@@ -126,7 +129,7 @@ function Skills() {
         <SiCss3 />
         <p
           data-scroll
-          data-scroll-speed="-3"
+          data-scroll-speed="-2"
           // data-scroll-direction="horizontal"
         >
           CSS
