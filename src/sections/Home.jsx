@@ -6,9 +6,11 @@ import CanvasHeroSection from "../components/CanvasHeroSection/CanvasHeroSection
 const HomeContainer = styled.div`
   width: (100vw);
   min-height: 180vh;
-  /* border: 1px solid red; */
   background-color: black;
   position: relative;
+  /* @media screen and (min-width: 1701px) {
+    min-height: 150vh;
+  } */
 `;
 const FixGrayLine = styled.div`
   width: 100vw;

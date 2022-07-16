@@ -10,13 +10,13 @@ import {
   ShootingSquare2,
   ShootingSquare3,
   TitleContainer,
+  DraggableSquare4,
 } from "./StyledCanvasComponents";
 import gsap from "gsap";
 const Canvas = styled.div`
   width: 100%;
   height: calc(100vh - 8rem);
   position: relative;
-  /* overflow: hidden; */
 `;
 
 // COMPONENT
@@ -28,19 +28,17 @@ function CanvasHeroSection() {
   const dragCircle = useRef(null);
   const controls = useDragControls();
   useEffect(() => {
+    // This square is responsible for draggable square all over the screen
     gsap.to(shootingSquare1.current, {
       x: function (x) {
         return (x += window.innerWidth);
       },
-
       rotate: 360,
       borderRadius: "50%",
       ease: "Power3.easeOut",
-      boxShadow: "2px 2px 20px red",
+      boxShadow: "5px 5px 30px cyan",
       duration: 20,
       delay: 9,
-
-      //   repeat: -1,
     });
     gsap.to(shootingSquare2.current, {
       y: function (y) {
@@ -128,7 +126,7 @@ function CanvasHeroSection() {
         dragElastic={0.7}
         dragConstraints={{ left: 500, right: 400, top: 100, bottom: 200 }}
         onDragEnd={handleDragEnd}
-      ></DraggableSquare1>
+      />
       <DraggableSquare2
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: 320 }}
@@ -148,7 +146,16 @@ function CanvasHeroSection() {
         dragElastic={0.7}
         dragConstraints={{ left: 300, right: 500, top: 100, bottom: 50 }}
         onDragEnd={handleDragEnd}
-      ></DraggableSquare3>
+      />
+      <DraggableSquare4
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotate: 520 }}
+        transition={{ duration: 1.5, delay: 8 }}
+        drag
+        dragElastic={0.7}
+        dragConstraints={{ left: 300, right: 200, top: 100, bottom: 100 }}
+        onDragEnd={handleDragEnd}
+      />
       <DraggableCircle
         dragControls={controls}
         ref={dragCircle}
