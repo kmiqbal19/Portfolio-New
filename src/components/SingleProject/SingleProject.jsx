@@ -91,6 +91,10 @@ const GitLink = styled.a`
     height: 50px;
     transition: all 0.3s ease;
     color: rgba(255, 255, 255, 0.5);
+    @media screen and (max-width: 650px) {
+      width: 40px;
+      height: 40px;
+    }
     &:hover {
       fill: #010280;
       color: black;
@@ -105,10 +109,18 @@ const ProjectLink = styled.a`
     height: 50px;
     transition: all 0.3s ease;
     color: rgba(255, 255, 255, 0.5);
+    @media screen and (max-width: 650px) {
+      width: 40px;
+      height: 40px;
+    }
     &:hover {
       fill: white;
       width: 55px;
       height: 55px;
+      @media screen and (max-width: 650px) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 `;

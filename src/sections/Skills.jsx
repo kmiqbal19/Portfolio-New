@@ -114,7 +114,11 @@ function Skills() {
       </JSContainer>
       <HtmlContainer>
         <SiHtml5 />
-        <p data-scroll data-scroll-speed="-3">
+        <p
+          data-scroll
+          data-scroll-speed="-3"
+          data-scroll-direction="horizontal"
+        >
           HTML
         </p>
       </HtmlContainer>
@@ -122,8 +126,8 @@ function Skills() {
         <SiCss3 />
         <p
           data-scroll
-          data-scroll-speed="-2"
-          data-scroll-direction="horizontal"
+          data-scroll-speed="-3"
+          // data-scroll-direction="horizontal"
         >
           CSS
         </p>

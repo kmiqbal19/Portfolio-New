@@ -5,17 +5,17 @@ export const ReactContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 300px;
-  height: 300px;
-  /* border: 1px solid blue; */
+  width: calc(20rem + 5vw);
+  height: calc(20rem + 5vw);
   position: absolute;
   right: 30%;
   top: 15%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+
   svg {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     color: #61dafb;
     animation-name: rotation;
     animation-duration: 20s;
@@ -35,7 +35,7 @@ export const ReactContainer = styled(motion.div)`
     position: absolute;
     bottom: 10%;
     mix-blend-mode: excursion;
-    font-size: 15rem;
+    font-size: calc(10rem + 3vw);
   }
 `;
 
@@ -44,24 +44,23 @@ export const NodeContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 250px;
-  height: 250px;
-  /* border: 1px solid blue; */
+  width: calc(15rem + 5vw);
+  height: calc(15rem + 5vw);
   position: absolute;
   right: 10%;
   top: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     color: #68a063;
   }
   p {
     position: absolute;
     top: -10%;
     mix-blend-mode: excursion;
-    font-size: 8rem;
+    font-size: calc(4rem + 3vw);
   }
 `;
 export const MongoDBContainer = styled(motion.div)`
@@ -69,17 +68,16 @@ export const MongoDBContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 300px;
-  height: 300px;
-  /* border: 1px solid blue; */
+  width: calc(25rem + 5vw);
+  height: calc(25rem + 5vw);
   position: absolute;
   right: 30%;
-  bottom: 5%;
+  bottom: 13%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
-    width: 60%;
-    height: 70%;
+    width: 80%;
+    height: 100%;
     color: #2f8819;
   }
   p {
@@ -87,7 +85,7 @@ export const MongoDBContainer = styled(motion.div)`
     top: 20%;
     left: -10%;
     mix-blend-mode: excursion;
-    font-size: 8rem;
+    font-size: calc(8rem + 2vw);
   }
 `;
 export const ReduxContainer = styled(motion.div)`
@@ -95,17 +93,16 @@ export const ReduxContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 100px;
-  height: 100px;
-  /* border: 1px solid blue; */
+  width: calc(8rem + 2vw);
+  height: calc(8rem + 2vw);
   position: absolute;
   right: 10%;
   bottom: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     color: violet;
   }
   p {
@@ -113,7 +110,7 @@ export const ReduxContainer = styled(motion.div)`
     bottom: 5%;
     right: -10%;
     mix-blend-mode: excursion;
-    font-size: 7rem;
+    font-size: calc(7rem + 2vw);
   }
 `;
 export const JSContainer = styled(motion.div)`
@@ -121,9 +118,9 @@ export const JSContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 350px;
-  height: 350px;
-  /* border: 1px solid blue; */
+  width: calc(28rem + 5vw);
+  height: calc(28rem + 5vw);
+
   position: absolute;
   left: 10%;
   top: 28%;
@@ -138,7 +135,7 @@ export const JSContainer = styled(motion.div)`
     position: absolute;
     bottom: 0%;
     mix-blend-mode: excursion;
-    font-size: 10rem;
+    font-size: calc(8rem + 2vw);
   }
 `;
 export const HtmlContainer = styled(motion.div)`
@@ -146,12 +143,12 @@ export const HtmlContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 200px;
-  height: 200px;
-  /* border: 1px solid blue; */
+  width: calc(10rem + 5vw);
+  height: calc(10rem + 5vw);
+
   position: absolute;
-  left: 10%;
-  bottom: 25%;
+  left: 25%;
+  bottom: 5%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
@@ -163,7 +160,7 @@ export const HtmlContainer = styled(motion.div)`
     position: absolute;
     bottom: -10%;
     mix-blend-mode: excursion;
-    font-size: 8rem;
+    font-size: calc(7rem + 3vw);
   }
 `;
 export const CssContainer = styled(motion.div)`
@@ -171,24 +168,25 @@ export const CssContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 150px;
-  height: 150px;
-  /* border: 1px solid blue; */
+  width: calc(15rem + 5vw);
+  height: calc(15rem + 5vw);
+
   position: absolute;
-  left: 25%;
-  bottom: 5%;
+  left: 10%;
+  bottom: 25%;
+
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   svg {
-    width: 60%;
-    height: 70%;
+    width: 80%;
+    height: 90%;
     color: #0080ff;
   }
   p {
     position: absolute;
     top: 10%;
     mix-blend-mode: excursion;
-    font-size: 10rem;
+    font-size: calc(10rem + 2vw);
   }
 `;
 export const SkillTitleContainer = styled.div`
@@ -212,12 +210,13 @@ export const SkillTitleContainer = styled.div`
 `;
 export const SkillsQuote = styled(motion.p)`
   position: absolute;
-  font-size: 2rem;
+  font-size: calc(1rem + 0.7vw);
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.5);
-  width: 400px;
+  width: calc(350px + 6vw);
   line-height: 1.5;
   top: 50%;
-  left: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: left;
 `;
