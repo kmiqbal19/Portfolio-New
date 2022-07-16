@@ -39,7 +39,7 @@ const FixLine = styled.div`
 
 function Skills() {
   return (
-    <SkillsContainer>
+    <SkillsContainer id="skills">
       <FixLine />
       <SkillTitleContainer>
         <div>

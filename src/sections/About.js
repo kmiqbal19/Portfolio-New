@@ -135,7 +135,7 @@ const About = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="new-arrival">
+    <Section ref={ref} id="about">
       <AboutTextContainer>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
