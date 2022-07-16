@@ -25,11 +25,12 @@ const SelectedProjectsTitle = styled.div`
   @media screen and (max-width: 1500px) {
     bottom: 5%;
   }
-  /* @media screen and (max-width: 950px) {
-    bottom: 15%;
-  } */
+
   @media screen and (max-width: 750px) {
     width: 90vw;
+  }
+  @media screen and (max-width: 450px) {
+    bottom: 4%;
   }
   div {
     overflow: hidden;
@@ -60,7 +61,7 @@ function Home() {
       <SelectedProjectsTitle>
         <div>
           <motion.p
-            initial={{ y: 70, opacity: 0 }}
+            initial={{ y: window.innerWidth < 550 ? 50 : 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
@@ -70,7 +71,7 @@ function Home() {
         <br />
         <div>
           <motion.p
-            initial={{ y: 70, opacity: 0 }}
+            initial={{ y: window.innerWidth < 550 ? 50 : 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             style={{ marginLeft: "10rem" }}

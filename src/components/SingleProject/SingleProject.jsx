@@ -13,6 +13,25 @@ const Project = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   color: white;
+  @media screen and (max-width: 650px) {
+    &:nth-child(1) {
+      margin-left: 0vw;
+    }
+    &:nth-child(4) {
+      margin-right: 0vw;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    width: 80vw;
+    height: 80%;
+    margin: 0rem 25vw;
+  }
+  @media screen and (max-width: 650px) {
+    width: 100vw;
+    height: 75%;
+    margin: 0rem 35vw;
+  }
+
   img {
     position: absolute;
     top: 0;
@@ -32,6 +51,10 @@ const TitleOverlay = styled.div`
   position: absolute;
   left: -20%;
   bottom: 0%;
+  @media screen and (max-width: 700px) {
+    left: 0%;
+    width: 100%;
+  }
 `;
 const Title = styled.p`
   font-size: calc(5rem + 5vw);
@@ -39,6 +62,9 @@ const Title = styled.p`
   left: -15%;
   bottom: 15%;
   text-transform: uppercase;
+  @media screen and (max-width: 700px) {
+    left: 5%;
+  }
 `;
 const BuiltWith = styled.p`
   width: 60%;
@@ -46,6 +72,9 @@ const BuiltWith = styled.p`
   position: absolute;
   bottom: 5%;
   left: 2%;
+  @media screen and (max-width: 700px) {
+    left: 6%;
+  }
 `;
 const LinkContainer = styled.div`
   width: 150px;
@@ -90,7 +119,10 @@ function SingleProject() {
       initial={{ filter: "grayscale(100%)", height: "50%" }}
       whileInView={{ filter: "grayscale(0%)", height: "75%" }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: false, amount: "all" }}
+      viewport={{
+        once: false,
+        amount: window.innerWidth < 1000 ? "some" : "all",
+      }}
     >
       <img src={img} alt="" />
       <LinkContainer>

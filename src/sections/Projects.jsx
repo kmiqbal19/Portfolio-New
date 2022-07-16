@@ -11,21 +11,21 @@ const ProjectsContainer = styled.div`
   width: 100vw;
   margin: 0 auto;
   overflow-x: hidden;
-  /* border: 2px solid red; */
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   position: relative;
   background-color: black;
 `;
 const MovableWrapper = styled(motion.div)`
   height: 100vh;
-
   width: auto;
   display: flex;
   justify-content: center;
   padding-left: 10vw;
   align-items: center;
+  @media screen and (max-width: 650px) {
+    padding-left: 0vw;
+  }
 `;
 const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
