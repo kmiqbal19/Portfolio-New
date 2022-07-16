@@ -11,6 +11,10 @@ export const DraggableSquare1 = styled(motion.div)`
   left: 5%;
   cursor: grab;
   transition: box-shadow 1s ease;
+  @media screen and (min-width: 2000px) {
+    width: calc(80px + 1vw);
+    height: calc(80px + 1vw);
+  }
 `;
 // Box with "MOVE US"
 export const DraggableSquare2 = styled(motion.div)`
@@ -28,7 +32,14 @@ export const DraggableSquare2 = styled(motion.div)`
   span {
     color: white;
     text-shadow: 1px 1px 10px cyan;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.5vw);
+  }
+  @media screen and (min-width: 2000px) {
+    width: calc(200px + 3vw);
+    height: calc(200px + 3vw);
+  }
+  @media screen and (max-width: 1100px) {
+    left: 65%;
   }
 `;
 export const DraggableSquare3 = styled(motion.div)`
@@ -40,6 +51,10 @@ export const DraggableSquare3 = styled(motion.div)`
   right: 10%;
   cursor: grab;
   transition: box-shadow 1s ease;
+  @media screen and (min-width: 2000px) {
+    width: calc(50px + 1vw);
+    height: calc(50px + 1vw);
+  }
 `;
 export const DraggableSquare4 = styled(motion.div)`
   width: ${(props) => props.theme.squareLenghtXl};
@@ -49,6 +64,10 @@ export const DraggableSquare4 = styled(motion.div)`
   bottom: 20%;
   right: 25%;
   cursor: grab;
+  @media screen and (min-width: 2000px) {
+    width: calc(250px + 3vw);
+    height: calc(250px + 3vw);
+  }
   @media screen and (max-width: 1700px) {
     bottom: 2%;
     width: 150px;
@@ -66,6 +85,11 @@ export const DraggableCircle = styled(motion.div)`
   cursor: grab;
   border-radius: 50%;
   z-index: 10;
+  @media screen and (min-width: 3000px) {
+    width: 800px;
+    height: 800px;
+    top: 25%;
+  }
   @media screen and (min-width: 2000px) {
     width: 600px;
     height: 600px;
@@ -91,6 +115,10 @@ export const ShootingSquare1 = styled.div`
   &:hover {
     background-color: lightblue;
   }
+  @media screen and (min-width: 2000px) {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
+  }
 `;
 export const ShootingSquare2 = styled.div`
   width: 50px;
@@ -100,6 +128,9 @@ export const ShootingSquare2 = styled.div`
   bottom: -10rem;
   right: 30%;
   opacity: 0.5;
+  @media screen and (min-width: 2000px) {
+    border: 2px solid white;
+  }
   @media screen and (min-width: 1700px) {
     width: 70px;
     height: 70px;
@@ -113,6 +144,9 @@ export const ShootingSquare3 = styled.div`
   top: 30%;
   right: -5%;
   opacity: 0.5;
+  @media screen and (min-width: 2000px) {
+    border: 2px solid white;
+  }
   @media screen and (min-width: 1700px) {
     width: 50px;
     height: 50px;

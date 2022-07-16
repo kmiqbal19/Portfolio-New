@@ -149,7 +149,7 @@ function CanvasHeroSection() {
       />
       <DraggableSquare4
         initial={{ scale: 0 }}
-        animate={{ scale: 1, rotate: 520 }}
+        animate={{ scale: 1, rotate: 490 }}
         transition={{ duration: 1.5, delay: 8 }}
         drag
         dragElastic={0.7}
