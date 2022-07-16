@@ -117,17 +117,19 @@ export const MobileMenu = styled(motion.div)`
       cursor: pointer;
       will-change: transform;
       &:hover {
-        transform: skewX(15deg);
+        transform: translateY(-20%);
       }
       span {
         display: inline-block;
         font-size: ${(props) => props.theme.fontxxl};
         color: white;
+        transition: all 0.3s ease;
         &:hover {
-          color: yellow;
+          color: red;
+          letter-spacing: 2px;
         }
         &:active {
-          color: green;
+          color: lightblue;
         }
       }
     }
