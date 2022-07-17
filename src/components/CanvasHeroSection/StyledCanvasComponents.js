@@ -176,6 +176,7 @@ export const TitleContainer = styled.div`
   top: 15%;
   left: 15%;
   font-family: Arial, Helvetica, sans-serif;
+
   @media screen and (min-width: 2000px) {
     top: 20%;
   }
@@ -201,7 +202,7 @@ export const TitleContainer = styled.div`
       font-size: 4rem;
       font-weight: lighter;
       @media screen and (min-width: 2000px) {
-        font-size: calc(1rem + 2vw);
+        font-size: calc(1.3rem + 2vw);
       }
       @media screen and (max-width: 750px) {
         font-size: 3rem;

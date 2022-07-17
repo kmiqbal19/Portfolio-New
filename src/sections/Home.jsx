@@ -39,7 +39,7 @@ const SelectedProjectsTitle = styled.div`
   p {
     font-size: calc(3rem + 3vw);
     font-family: "Ubuntu", sans-serif;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     @media screen and (max-width: 500px) {
       font-size: calc(4rem + 3vw);
     }
@@ -51,6 +51,9 @@ const AnimatedLine = styled(motion.span)`
   position: absolute;
   right: 2%;
   bottom: 10%;
+  @media screen and (min-width: 2000px) {
+    bottom: 8%;
+  }
 `;
 // COMPONENT
 function Home() {
@@ -61,7 +64,7 @@ function Home() {
       <SelectedProjectsTitle>
         <div>
           <motion.p
-            initial={{ y: window.innerWidth < 550 ? 50 : 70, opacity: 0 }}
+            initial={{ y: window.innerWidth < 550 ? 50 : 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
@@ -71,7 +74,7 @@ function Home() {
         <br />
         <div>
           <motion.p
-            initial={{ y: window.innerWidth < 550 ? 50 : 70, opacity: 0 }}
+            initial={{ y: window.innerWidth < 550 ? 50 : 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             style={{ marginLeft: "10rem" }}
