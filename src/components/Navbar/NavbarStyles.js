@@ -8,6 +8,9 @@ export const Nav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   color: white;
+  @media screen and (min-width: 2000px) {
+    height: 100px;
+  }
 `;
 export const LogoContainer = styled.div`
   width: 200px;
@@ -32,11 +35,13 @@ export const ListContainer = styled.ul`
 export const List = styled.li`
   margin: 0 2rem;
   list-style: none;
-  font-size: ${(props) => props.theme.fontxl};
+  font-size: calc(1.3rem + 0.5vw);
   transition: all 0.3s ease;
+  cursor: pointer;
   &:hover {
     transform: translateY(-10%);
-    color: orange;
+    letter-spacing: 0.5px;
+    color: red;
   }
   &:last-child {
     margin-right: calc(4rem + 2vw);

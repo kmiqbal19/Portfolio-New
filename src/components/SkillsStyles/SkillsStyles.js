@@ -253,10 +253,14 @@ export const CssContainer = styled(motion.div)`
 export const SkillTitleContainer = styled.div`
   width: calc(400px + 5vw);
   color: white;
-  margin-left: 5rem;
+  margin-left: calc(5rem + 1vw);
   color: rgba(255, 255, 255, 0.9);
   font-family: "Ubuntu", sans-serif;
-  font-size: calc(5rem + 2vw);
+  font-size: calc(4rem + 2vw);
+  @media screen and (min-width: 2000px) {
+    margin-left: calc(10rem + 3vw);
+    margin-top: calc(4rem + 3vw);
+  }
   @media screen and (max-width: 850px) {
     font-size: calc(4rem + 3vw);
   }

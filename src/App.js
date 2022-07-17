@@ -48,7 +48,7 @@ function App() {
           }
           containerRef={containerRef}
         >
-          {/* {loaded ? null : <Preloader />} */}
+          {loaded ? null : <Preloader />}
           <ScrollTriggerProxy />
           <AnimatePresence>
             <main className="App" data-scroll-container ref={containerRef}>
