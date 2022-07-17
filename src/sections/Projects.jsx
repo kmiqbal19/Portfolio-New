@@ -51,39 +51,79 @@ const Projects = () => {
     let movableWrapper = movableWrapperRef.current;
     let pinWidth = movableWrapper.offsetWidth;
     let t1 = gsap.timeline();
-    setTimeout(() => {
-      t1.to(fixedContainer, {
-        scrollTrigger: {
-          trigger: fixedContainer,
-          start: "top top",
-          end: pinWidth,
-          scroller: ".App",
-          scrub: 1,
-          // markers: true,
-          pin: true,
-        },
-        // height: `${movableWrapper.scrollWidth}px`,
-        ease: "none",
-      });
-      t1.fromTo(
-        movableWrapper,
-        { x: 0, backgroundColor: "black" },
-        {
-          backgroundColor: "red",
-          scrollTrigger: {
-            trigger: fixedContainer,
-            start: "top top",
-            end: pinWidth,
-            scroller: ".App",
-            scrub: true,
-            // markers: true,
-          },
-          x: -pinWidth + window.innerWidth,
-        }
-      );
+    ScrollTrigger.matchMedia({
+      "(min-width: 750px)": function () {
+        setTimeout(() => {
+          t1.to(fixedContainer, {
+            scrollTrigger: {
+              trigger: fixedContainer,
+              start: "top top",
+              end: pinWidth,
+              scroller: ".App",
+              scrub: 1,
+              // markers: true,
+              pin: true,
+            },
+            // height: `${movableWrapper.scrollWidth}px`,
+            ease: "none",
+          });
+          t1.fromTo(
+            movableWrapper,
+            { x: 0, backgroundColor: "black" },
+            {
+              backgroundColor: "red",
+              scrollTrigger: {
+                trigger: fixedContainer,
+                start: "top top",
+                end: pinWidth,
+                scroller: ".App",
+                scrub: true,
+                // markers: true,
+              },
+              x: -pinWidth + window.innerWidth,
+            }
+          );
 
-      ScrollTrigger.refresh();
-    }, 1000);
+          ScrollTrigger.refresh();
+        }, 1000);
+      },
+      "(max-width: 749px)": function () {
+        setTimeout(() => {
+          t1.to(fixedContainer, {
+            scrollTrigger: {
+              trigger: fixedContainer,
+              start: "top top",
+              end: 2 * pinWidth,
+              scroller: ".App",
+              scrub: 1,
+              // markers: true,
+              pin: true,
+            },
+            // height: `${movableWrapper.scrollWidth}px`,
+            ease: "none",
+          });
+          t1.fromTo(
+            movableWrapper,
+            { x: 0, backgroundColor: "black" },
+            {
+              backgroundColor: "red",
+              scrollTrigger: {
+                trigger: fixedContainer,
+                start: "top top",
+                end: 2 * pinWidth,
+                scroller: ".App",
+                scrub: true,
+                // markers: true,
+              },
+              x: -pinWidth + window.innerWidth,
+            }
+          );
+
+          ScrollTrigger.refresh();
+        }, 1000);
+      },
+    });
+
     return () => {
       // Let's clear instances
       t1.kill();
