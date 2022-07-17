@@ -13,12 +13,20 @@ export const Nav = styled(motion.nav)`
   }
 `;
 export const LogoContainer = styled.div`
-  width: 200px;
-  height: 100%;
+  width: 60px;
+  height: 50px;
+  /* border: 3px solid red; */
+  margin-left: 5rem;
+  cursor: pointer;
   img {
+    filter: grayscale(80%);
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: all 0.5s ease;
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 `;
 export const ListContainer = styled.ul`

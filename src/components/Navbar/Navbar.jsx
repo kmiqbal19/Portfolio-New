@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import "./Navbar.scss";
 import { AnimatePresence } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import logo from "../../assets/logo-img.png";
 // FRAMER MOTION
 const variants = {
   initial: {
@@ -68,8 +69,8 @@ function Navbar() {
         animate={{ y: "0%" }}
         transition={{ delay: 4.5, ease: "backOut", duration: 0.5 }}
       >
-        <LogoContainer>
-          <img src="https://i.ibb.co/ZHFdJhW/city.png" alt="logo" />
+        <LogoContainer onClick={() => window.location.reload()}>
+          <img src={logo} alt="logo" />
         </LogoContainer>
         <ListContainer>
           <List onClick={() => handleScrollDevice("#projects")}>projects</List>
