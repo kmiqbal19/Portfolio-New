@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import SingleProject from "../components/SingleProject/SingleProject.jsx";
+import ProjectsData from "../data/ProjectsData.js";
 
 const ProjectsContainer = styled.div`
   min-height: 100vh;
@@ -27,6 +28,20 @@ const MovableWrapper = styled(motion.div)`
     padding-left: 0vw;
   }
 `;
+const Items = () => {
+  return ProjectsData.map((project, i) => {
+    return (
+      <SingleProject
+        key={`project-${i + 1}`}
+        title={project.title}
+        builtWith={project.builtWith}
+        git={project.gitLink}
+        demo={project.projectDemoLink}
+        imgLink={project.imageLink}
+      />
+    );
+  });
+};
 const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const containerRef = useRef(null);
@@ -78,13 +93,9 @@ const Projects = () => {
 
   return (
     <>
-      {/* <h1 style={{ margin: "7rem 0rem" }}>Projects</h1> */}
       <ProjectsContainer ref={containerRef} id="projects">
         <MovableWrapper ref={movableWrapperRef}>
-          <SingleProject />
-          <SingleProject />
-          <SingleProject />
-          <SingleProject />
+          <Items />
         </MovableWrapper>
       </ProjectsContainer>
     </>

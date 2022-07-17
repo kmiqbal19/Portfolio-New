@@ -1,4 +1,4 @@
-const ProjectData = [
+const ProjectsData = [
   {
     title: "taskeman",
     builtWith:
@@ -35,4 +35,4 @@ const ProjectData = [
   },
 ];
 
-export default ProjectData;
+export default ProjectsData;
