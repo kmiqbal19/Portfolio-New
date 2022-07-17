@@ -110,6 +110,7 @@ export const MobileMenu = styled(motion.div)`
   top: 0;
   border: 2rem solid rgba(255, 0, 0, 1);
   border-bottom: 5rem solid rgba(255, 0, 0, 1);
+  border-radius: 0rem 0rem 3rem 3rem;
   left: 0;
   background-color: black;
   z-index: 30;

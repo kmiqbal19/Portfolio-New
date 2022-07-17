@@ -123,7 +123,7 @@ export const ShootingSquare1 = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   top: 100px;
-  left: -10%;
+  left: -20%;
   transition: background-color 0.5s ease;
   cursor: pointer;
   background-color: white;
