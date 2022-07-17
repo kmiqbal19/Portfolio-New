@@ -44,11 +44,10 @@ export const List = styled.li`
   margin: 0 2rem;
   list-style: none;
   font-size: calc(1.3rem + 0.5vw);
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
   cursor: pointer;
   &:hover {
-    transform: translateY(-10%);
-    letter-spacing: 0.5px;
+    transform: scale(1.18);
     color: red;
   }
   &:last-child {
