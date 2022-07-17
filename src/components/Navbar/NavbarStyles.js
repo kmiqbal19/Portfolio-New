@@ -18,6 +18,9 @@ export const LogoContainer = styled.div`
   /* border: 3px solid red; */
   margin-left: 5rem;
   cursor: pointer;
+  @media screen and (max-width: 850px) {
+    margin-left: 2rem;
+  }
   img {
     filter: grayscale(80%);
     width: 100%;

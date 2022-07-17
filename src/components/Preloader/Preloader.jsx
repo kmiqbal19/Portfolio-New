@@ -16,7 +16,7 @@ const PreloaderWrapper = styled(motion.div)`
     flex-direction: column;
   }
   div {
-    width: 33%;
+    width: 33.33%;
     height: 100%;
     background-color: white;
     /* border: 1px solid black; */
@@ -25,13 +25,13 @@ const PreloaderWrapper = styled(motion.div)`
     align-items: center;
     @media screen and (max-width: 749px) {
       width: 100%;
-      height: 33%;
+      height: 33.33%;
     }
     &:last-child {
-      width: 34%;
+      width: 33.34%;
       @media screen and (max-width: 749px) {
         width: 100%;
-        height: 34%;
+        height: 33.34%;
       }
     }
     &:nth-child(2) {
