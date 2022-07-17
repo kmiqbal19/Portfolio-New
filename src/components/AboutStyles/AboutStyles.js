@@ -76,7 +76,7 @@ export const ImageContainer = styled.img`
 export const AboutTextContainer = styled.div`
   width: 50vw;
   height: 90vh;
-  /* border: 1px solid white; */
+
   margin-right: 10rem;
   position: absolute;
   top: 50%;
@@ -104,6 +104,8 @@ export const AboutTextContainer = styled.div`
     font-size: calc(4rem + 1.5vw);
     text-align: left;
     margin-bottom: 5rem;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
   }
   p {
     font-size: calc(1rem + 1vw);

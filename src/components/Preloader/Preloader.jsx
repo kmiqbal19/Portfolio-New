@@ -45,7 +45,7 @@ const PreloaderWrapper = styled(motion.div)`
       p {
         margin-right: 4rem;
         font-size: calc(2rem + 2vw);
-        font-family: "Marcellus", serif;
+        font-family: "Raleway", sans-serif;
         @media screen and (max-width: 1050px) {
           margin-right: 0rem;
         }

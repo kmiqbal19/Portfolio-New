@@ -3,8 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-${"" /* For Preloader */}
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 ${"" /* For Project Section */}
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 ${"" /* Main Styling */}
