@@ -15,7 +15,7 @@ function SingleProject({ title, builtWith, git, demo, imgLink }) {
   return (
     <Project
       initial={{ filter: "grayscale(100%)", height: "50%" }}
-      whileInView={{ filter: "grayscale(0%)", height: "75%" }}
+      whileInView={{ filter: "grayscale(0%)", height: "90%" }}
       transition={{ duration: 0.8 }}
       viewport={{
         once: false,

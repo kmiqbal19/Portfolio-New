@@ -1,3 +1,6 @@
+import taskemanImg from "../assets/Images/projects/Taskeman/Taskeman-img.png";
+import clogblogImg from "../assets/Images/projects/Clogblog Mockup/clogblog-img.png";
+import glowtodoImg from "../assets/Images/projects/Glow Todo/glowtodo-img.png";
 const ProjectsData = [
   {
     title: "taskeman",
@@ -5,8 +8,7 @@ const ProjectsData = [
       "Built with React, Redux Toolkit, Sass, Express, MongoDB, Framer Motion, Cloudinary (MERN Stack) ",
     gitLink: "https://github.com/kmiqbal19/TASKEMAN-Frontend",
     projectDemoLink: "http://taskeman.netlify.app/",
-    imageLink:
-      "https://i.ibb.co/x8Dv0fd/brands-people-Ax8-IA8-GAj-Vg-unsplash-1.jpg",
+    imageLink: taskemanImg,
   },
   {
     title: "ClogBlog",
@@ -14,8 +16,7 @@ const ProjectsData = [
       "Built with React, ContextAPI, Express, MongoDB, Cloudinary (MERN Stack)",
     gitLink: "https://github.com/kmiqbal19/ClogBlog-Client-SIde",
     projectDemoLink: "https://clogblog.netlify.app/",
-    imageLink:
-      "https://i.ibb.co/x8Dv0fd/brands-people-Ax8-IA8-GAj-Vg-unsplash-1.jpg",
+    imageLink: clogblogImg,
   },
   {
     title: "Ar Rahman",
@@ -30,8 +31,7 @@ const ProjectsData = [
     builtWith: "Built with vanilla JavaScript, HTML, CSS (MY FIRST JS PROJECT)",
     gitLink: "https://github.com/kmiqbal19/GlowToDo-App",
     projectDemoLink: "https://glow-todo.netlify.app/",
-    imageLink:
-      "https://i.ibb.co/x8Dv0fd/brands-people-Ax8-IA8-GAj-Vg-unsplash-1.jpg",
+    imageLink: glowtodoImg,
   },
 ];
 
