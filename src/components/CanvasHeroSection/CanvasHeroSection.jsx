@@ -143,6 +143,7 @@ function CanvasHeroSection() {
         }}
         onDragEnd={handleDragEnd}
       />
+      {/* Square with text */}
       <DraggableSquare2
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotate: 320 }}
@@ -157,7 +158,7 @@ function CanvasHeroSection() {
         }}
         onDragEnd={handleDragEnd}
       >
-        <span>Move Us</span>
+        <span>Short drag me in different direction</span>
       </DraggableSquare2>
       <DraggableSquare3
         initial={{ scale: 0 }}
@@ -195,12 +196,6 @@ function CanvasHeroSection() {
         transition={{ duration: 1.5, delay: 7.2 }}
         drag
         dragElastic={0.9}
-        // dragConstraints={{
-        //   left: window.innerWidth / 2,
-        //   right: window.innerWidth / 2,
-        //   top: window.innerHeight / 2,
-        //   bottom: window.innerHeight / 2,
-        // }}
       ></DraggableCircle>
       <ShootingSquare1
         title="Get him back!"

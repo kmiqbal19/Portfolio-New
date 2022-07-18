@@ -20,6 +20,7 @@ export const DraggableSquare1 = styled(motion.div)`
 export const DraggableSquare2 = styled(motion.div)`
   width: ${(props) => props.theme.squareLenghtLg};
   height: ${(props) => props.theme.squareLenghtLg};
+  padding: 2rem;
   border: 8px solid white;
   position: absolute;
   top: 10%;
