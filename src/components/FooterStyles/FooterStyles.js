@@ -142,6 +142,9 @@ export const FooterTextsContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  @media screen and (min-width: 1900px) {
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+  }
   p {
     letter-spacing: 0.5px;
     color: white;

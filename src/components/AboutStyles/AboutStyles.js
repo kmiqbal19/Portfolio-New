@@ -20,6 +20,9 @@ export const Overlay = styled.div`
   border-left: 7rem solid black;
   border-right: 7rem solid black;
   z-index: 5;
+  @media screen and (min-width: 851px) {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
   @media screen and (max-width: 1300px) {
     border-left: 4rem solid black;
     border-right: 4rem solid black;
@@ -48,6 +51,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: grey;
   @media screen and (max-width: 1300px) {
     right: 2%;
     width: 40vw;
@@ -64,7 +68,7 @@ export const Container = styled.div`
 export const ImageContainer = styled.img`
   width: 37vw;
   height: ${window.innerHeight}px;
-  object-fit: cover;
+  object-fit: contain;
   @media screen and (max-width: 850px) {
     width: 80vw;
   }
@@ -136,6 +140,9 @@ export const AboutTextContainer = styled.div`
     @media screen and (min-width: 1920px) {
       line-height: 2;
       font-size: calc(1rem + 0.9vw);
+    }
+    @media screen and (max-width: 650px) {
+      font-size: calc(1.2rem + 0.9vw);
     }
   }
 `;

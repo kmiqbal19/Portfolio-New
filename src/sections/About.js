@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
+import img1 from "../assets/Images/img-1.jpeg";
+import img2 from "../assets/Images/img-2.jpeg";
+import img3 from "../assets/Images/img-3.jpeg";
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
