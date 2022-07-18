@@ -75,8 +75,8 @@ export const ImageContainer = styled.img`
 
 export const AboutTextContainer = styled.div`
   width: 50vw;
-  height: 90vh;
-
+  height: 100vh;
+  /* border: 1px solid white; */
   margin-right: 10rem;
   position: absolute;
   top: 50%;
@@ -86,15 +86,30 @@ export const AboutTextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  padding: 0rem 4rem;
+  overflow-y: scroll;
+  padding: 1rem 4rem;
   z-index: 2;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(233, 136, 136, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(61, 4, 4, 0.8);
+    box-shadow: inset 0 0 6px rgba(184, 108, 108, 0.5);
+  }
   @media screen and (max-width: 850px) {
     width: 80vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   @media screen and (max-width: 450px) {
     width: 90vw;
@@ -103,20 +118,24 @@ export const AboutTextContainer = styled.div`
   h1 {
     font-size: calc(4rem + 1.5vw);
     text-align: left;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     font-weight: 500;
     font-family: "Ubuntu", sans-serif;
+    @media screen and (min-width: 1920px) {
+      margin-bottom: 5rem;
+    }
   }
   p {
     font-size: calc(1rem + 0.8vw);
-    line-height: 1.5;
+    line-height: 1.8;
     font-family: "Ubuntu Mono", monospace;
     font-style: italic;
     &:nth-child(2) {
       text-indent: 50px;
     }
-    /* @media screen and (max-width: 450px) {
-      text-align: center;
-    } */
+    @media screen and (min-width: 1920px) {
+      line-height: 2;
+      font-size: calc(1rem + 0.9vw);
+    }
   }
 `;

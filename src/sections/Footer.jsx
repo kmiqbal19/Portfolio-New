@@ -37,7 +37,7 @@ function Footer() {
           </div>
         </LetsWorkTextContainer>
         <SocialIconsContainer>
-          <span>Contact Me</span>
+          <span>Say Hi... 👋</span>
           <div>
             <a href="https://github.com/kmiqbal19" title="kmiqbal19">
               <BsGithub />
