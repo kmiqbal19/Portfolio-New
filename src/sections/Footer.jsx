@@ -42,14 +42,14 @@ function Footer() {
             <a href="https://github.com/kmiqbal19" title="kmiqbal19">
               <BsGithub />
             </a>
-            <a href="loc">
-              <SiGmail title="km.iqbal@gmail.com" />
+            <a href="mailto: km.iqbal01@gmail.com">
+              <SiGmail title="km.iqbal01@gmail.com" />
             </a>
-            <a href="loc">
+            <a href="https://wa.me/+4917677644904">
               <SiWhatsapp title="+49 176 776-44904" />
             </a>
-            <a href="loc">
-              <SiMessenger title="km.iqbal@gmail.com" />
+            <a href="https://m.me/khandakarmohammad.iqbal">
+              <SiMessenger title="Iqbal Khandakar" />
             </a>
           </div>
         </SocialIconsContainer>
