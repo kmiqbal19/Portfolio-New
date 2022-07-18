@@ -108,8 +108,13 @@ export const AboutTextContainer = styled.div`
     font-family: "Ubuntu", sans-serif;
   }
   p {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.8vw);
     line-height: 1.5;
+    font-family: "Ubuntu Mono", monospace;
+    font-style: italic;
+    &:nth-child(2) {
+      text-indent: 50px;
+    }
     /* @media screen and (max-width: 450px) {
       text-align: center;
     } */

@@ -90,10 +90,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          I'm a self-taught developer and also a student of web development. I
+          became familiar with languages like C and python from my bachelor's
+          courses. But during this pandemic, I got interested in this awesome
+          world of web development. So besides my academic study, I started
+          learning development and you know that learning is a never-ending
+          journey.
         </motion.p>
         <br />
         <motion.p
@@ -101,10 +103,18 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          I live in Magdeburg. Doing my masters in process safety and
+          environmental engineering here.
+        </motion.p>
+        <br />
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+        >
+          I love building web projects and studying more about web tools.I am a
+          quick learner. And if you have an opportunity to give me in this cool
+          web development journey. Contact me via social links.
         </motion.p>
       </AboutTextContainer>
 
