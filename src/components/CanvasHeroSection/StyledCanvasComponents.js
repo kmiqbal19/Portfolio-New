@@ -34,6 +34,7 @@ export const DraggableSquare2 = styled(motion.div)`
     color: white;
     text-shadow: 1px 1px 10px cyan;
     font-size: calc(1rem + 0.5vw);
+    text-align: center;
   }
   @media screen and (min-width: 2000px) {
     width: calc(200px + 3vw);

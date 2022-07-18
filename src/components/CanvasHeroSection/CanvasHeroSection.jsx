@@ -77,20 +77,23 @@ function CanvasHeroSection() {
 
   const handleDragEnd = (e, i) => {
     if (i.offset.x > 40) {
-      dragCircle.current.style.boxShadow = "5px 5px 80px blue";
+      dragCircle.current.style.boxShadow = "5px 5px 80px green";
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
       dragCircle.current.style.mixBlendMode = "difference";
     }
     if (i.offset.x < -10) {
       dragCircle.current.style.boxShadow = "5px 5px 80px red";
+      dragCircle.current.style.borderRadius = "0%";
     }
     if (i.offset.y > 10) {
-      dragCircle.current.style.boxShadow = "5px 5px 80px green";
+      dragCircle.current.style.boxShadow = "5px 5px 80px blue";
       dragCircle.current.style.borderRadius = "0%";
     }
     if (i.offset.y < -10) {
       dragCircle.current.style.boxShadow = "5px 5px 80px cyan";
+      dragCircle.current.style.borderRadius = "50%";
+      dragCircle.current.style.backgroundColor = "white";
     }
   };
   const handlePointerDown = (event) => {
@@ -158,7 +161,19 @@ function CanvasHeroSection() {
         }}
         onDragEnd={handleDragEnd}
       >
-        <span>Short drag me in different direction</span>
+        <motion.span
+          initial={{ opacity: 0.2 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 3,
+            yoyoDelay: 2,
+            yoyo: Infinity,
+            ease: "easeOut",
+            delay: 7,
+          }}
+        >
+          Short drag me in different direction
+        </motion.span>
       </DraggableSquare2>
       <DraggableSquare3
         initial={{ scale: 0 }}
