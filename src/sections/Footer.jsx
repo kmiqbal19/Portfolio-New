@@ -39,16 +39,33 @@ function Footer() {
         <SocialIconsContainer>
           <span>Say Hi... 👋</span>
           <div>
-            <a href="https://github.com/kmiqbal19" title="kmiqbal19">
+            <a
+              href="https://github.com/kmiqbal19"
+              rel="noreferrer"
+              target="_blank"
+              title="kmiqbal19"
+            >
               <BsGithub />
             </a>
-            <a href="mailto: km.iqbal01@gmail.com">
+            <a
+              href="mailto: km.iqbal01@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
               <SiGmail title="km.iqbal01@gmail.com" />
             </a>
-            <a href="https://wa.me/+4917677644904">
+            <a
+              href="https://wa.me/+4917677644904"
+              rel="noreferrer"
+              target="_blank"
+            >
               <SiWhatsapp title="+49 176 776-44904" />
             </a>
-            <a href="https://m.me/khandakarmohammad.iqbal">
+            <a
+              href="https://m.me/khandakarmohammad.iqbal"
+              rel="noreferrer"
+              target="_blank"
+            >
               <SiMessenger title="Iqbal Khandakar" />
             </a>
           </div>
@@ -58,9 +75,11 @@ function Footer() {
         <ul style={{ display: !show && "none" }}>
           <li>React</li>
           <li>Styled Components</li>
-          <li>GSAP</li>
-          <li>Framer Motion</li>
-          <li>Locmotive Scroll</li>
+          <li>Figma (Mockups)</li>
+          <li>GSAP (Animation)</li>
+          <li>Framer Motion (Animation)</li>
+          <li>Locmotive Scroll (Smooth-Scroll)</li>
+          <li>Netlify (Hosting)</li>
         </ul>
         <p>&copy; Portfolio 2022</p>
         <p>
