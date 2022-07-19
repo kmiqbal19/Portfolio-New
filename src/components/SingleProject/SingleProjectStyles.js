@@ -15,7 +15,7 @@ export const Project = styled(motion.div)`
     margin: 0rem 25vw;
   }
   @media screen and (max-width: 650px) {
-    width: 120vw;
+    width: 100vw;
     height: 75%;
     margin: 0rem 35vw;
     img {

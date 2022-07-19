@@ -8,6 +8,10 @@ ${"" /* For Project Section */}
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 ${"" /* For About Section */}
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+${"" /* For Built With */}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 ${"" /* Main Styling */}
 *,*::before,*::after{
     margin: 0;

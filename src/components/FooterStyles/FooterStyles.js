@@ -164,13 +164,20 @@ export const FooterTextsContainer = styled.div`
     right: -2rem;
     background-color: rgba(255, 250, 255, 0.1);
     border-radius: 1rem;
+    z-index: 1;
     li {
       letter-spacing: 0.5px;
       list-style: none;
       margin: 1rem;
       color: white;
-      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px blue;
+      font-size: calc(1.1rem + 0.4vw);
       text-align: center;
+      @media screen and (max-width: 750px) {
+        color: green;
+        font-family: "Press Start 2P", cursive;
+        font-size: 1rem;
+      }
     }
   }
 `;
