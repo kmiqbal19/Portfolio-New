@@ -20,7 +20,7 @@ const ProjectsData = [
     imageLink: clogblogImg,
   },
   {
-    title: "NPO draft",
+    title: "NPO TEMPLATE",
     builtWith: "Built with React, Sanity (CMS), Sass, Framer Motion, GSAP ",
     gitLink: "https://github.com/kmiqbal19/AR-RAHMAN-ORG",
     projectDemoLink: "https://ar-rahman-org.netlify.app/",
