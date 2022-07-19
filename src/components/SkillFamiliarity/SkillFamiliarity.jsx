@@ -17,6 +17,12 @@ const Container = styled.div`
     width: 60%;
     margin-left: calc(5rem + 3vw);
     line-height: 1.5;
+    @media screen and (max-width: 750px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 500px) {
+      margin-left: calc(3rem + 3vw);
+    }
   }
   &::before {
     content: "";
