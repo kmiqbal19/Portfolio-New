@@ -75,11 +75,11 @@ function Footer() {
         <ul style={{ display: !show && "none" }}>
           <li>React</li>
           <li>Styled Components</li>
-          <li>Figma (Mockups)</li>
-          <li>GSAP (Animation)</li>
-          <li>Framer Motion (Animation)</li>
-          <li>Locmotive Scroll (Smooth-Scroll)</li>
-          <li>Netlify (Hosting)</li>
+          <li>Figma</li>
+          <li>GSAP</li>
+          <li>Framer Motion</li>
+          <li>Locmotive Scroll</li>
+          <li>Netlify</li>
         </ul>
         <p>&copy; Portfolio 2022</p>
         <p>
