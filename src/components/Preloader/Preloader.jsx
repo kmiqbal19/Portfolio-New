@@ -36,6 +36,39 @@ const PreloaderWrapper = styled(motion.div)`
     }
     &:nth-child(2) {
       flex-direction: column;
+      position: relative;
+      &::after {
+        /* border: 1px solid red; */
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 100%;
+        background-color: white;
+        left: -5px;
+        top: 0;
+        @media screen and (max-width: 749px) {
+          width: 100%;
+          height: 1rem;
+          left: 0;
+          top: -5px;
+        }
+      }
+      &::before {
+        /* border: 1px solid red; */
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 100%;
+        background-color: white;
+        right: -5px;
+        top: 0;
+        @media screen and (max-width: 749px) {
+          width: 100%;
+          height: 1rem;
+          right: 0;
+          top: calc(100% - 5px);
+        }
+      }
       @media screen and (max-width: 1050px) {
         svg {
           width: 30vw;
