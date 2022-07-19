@@ -112,7 +112,7 @@ const About = () => {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
         >
           I love learning new web tools , build web projects, play game and read
-          books. You can contact me via social links.
+          articles. You can contact me via social links.
         </motion.p>
       </AboutTextContainer>
 
