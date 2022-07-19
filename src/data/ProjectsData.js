@@ -1,6 +1,7 @@
 import taskemanImg from "../assets/Images/projects/Taskeman/Taskeman-img.png";
 import clogblogImg from "../assets/Images/projects/Clogblog Mockup/clogblog-img.png";
 import glowtodoImg from "../assets/Images/projects/Glow Todo/glowtodo-img.png";
+import ArRahmanImg from "../assets/Images/projects/Ar-rahman/ar-rahman-img-mockup.png";
 const ProjectsData = [
   {
     title: "taskeman",
@@ -19,12 +20,11 @@ const ProjectsData = [
     imageLink: clogblogImg,
   },
   {
-    title: "Ar Rahman",
+    title: "NPO draft",
     builtWith: "Built with React, Sanity (CMS), Sass, Framer Motion, GSAP ",
     gitLink: "https://github.com/kmiqbal19/AR-RAHMAN-ORG",
     projectDemoLink: "https://ar-rahman-org.netlify.app/",
-    imageLink:
-      "https://i.ibb.co/x8Dv0fd/brands-people-Ax8-IA8-GAj-Vg-unsplash-1.jpg",
+    imageLink: ArRahmanImg,
   },
   {
     title: "GLOWTODO",

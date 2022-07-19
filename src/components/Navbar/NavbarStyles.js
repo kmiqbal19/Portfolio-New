@@ -85,7 +85,7 @@ export const HamburgerContainer = styled.div`
     }
   }
 `;
-export const Cross = styled.div`
+export const Cross = styled(motion.div)`
   width: 60px;
   height: 60px;
 

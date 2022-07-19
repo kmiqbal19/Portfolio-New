@@ -9,23 +9,24 @@ export const Project = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   color: white;
-  @media screen and (max-width: 650px) {
-    &:nth-child(1) {
-      margin-left: 0vw;
-    }
-    &:nth-child(4) {
-      margin-right: 0vw;
-    }
-  }
   @media screen and (max-width: 950px) {
     width: 80vw;
     height: 80%;
     margin: 0rem 25vw;
   }
   @media screen and (max-width: 650px) {
-    width: 100vw;
+    width: 120vw;
     height: 75%;
     margin: 0rem 35vw;
+    img {
+      object-fit: contain;
+    }
+    &:nth-child(1) {
+      margin-left: 0vw;
+    }
+    &:nth-child(4) {
+      margin-right: 0vw;
+    }
   }
 
   img {

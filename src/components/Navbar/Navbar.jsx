@@ -88,14 +88,19 @@ function Navbar() {
           <MobileMenu
             initial={{ height: "0%", opacity: 0 }}
             animate={{ height: "500px", opacity: 1 }}
-            exit={{ x: "100%" }}
+            exit={{ height: "0%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <Cross onClick={() => setClicked(false)}>
+            <Cross exit={{ opacity: 0 }} onClick={() => setClicked(false)}>
               <div className="cross-line cross-line-1"></div>
               <div className="cross-line cross-line-2"></div>
             </Cross>
-            <motion.ul variants={variants} initial="initial" animate="animate">
+            <motion.ul
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              exit={{ opacity: 0 }}
+            >
               <li onClick={() => handleScroll("#projects")}>
                 <motion.span variants={childrenVar}>projects</motion.span>
               </li>

@@ -93,7 +93,7 @@ const Projects = () => {
             scrollTrigger: {
               trigger: fixedContainer,
               start: "top top",
-              end: 2 * pinWidth,
+              end: 2.5 * pinWidth,
               scroller: ".App",
               scrub: 1,
               // markers: true,
@@ -110,7 +110,7 @@ const Projects = () => {
               scrollTrigger: {
                 trigger: fixedContainer,
                 start: "top top",
-                end: 2 * pinWidth,
+                end: 2.5 * pinWidth,
                 scroller: ".App",
                 scrub: true,
                 // markers: true,
