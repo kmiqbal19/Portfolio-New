@@ -38,7 +38,6 @@ const PreloaderWrapper = styled(motion.div)`
       flex-direction: column;
       position: relative;
       &::after {
-        /* border: 1px solid red; */
         content: "";
         position: absolute;
         width: 1rem;
@@ -54,7 +53,6 @@ const PreloaderWrapper = styled(motion.div)`
         }
       }
       &::before {
-        /* border: 1px solid red; */
         content: "";
         position: absolute;
         width: 1rem;

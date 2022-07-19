@@ -160,7 +160,7 @@ export const ShootingSquare3 = styled.div`
   border: 1px solid white;
   position: absolute;
   top: 30%;
-  right: -5%;
+  right: -10%;
   opacity: 0.5;
   @media screen and (min-width: 2000px) {
     border: 2px solid white;
