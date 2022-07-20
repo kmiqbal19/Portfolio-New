@@ -165,8 +165,8 @@ function CanvasHeroSection() {
           initial={{ opacity: 0.2 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 3,
-            yoyoDelay: 2,
+            duration: 2,
+            yoyoDelay: 1,
             yoyo: Infinity,
             ease: "easeOut",
             delay: 7,
