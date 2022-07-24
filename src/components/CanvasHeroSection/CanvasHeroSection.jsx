@@ -94,6 +94,7 @@ function CanvasHeroSection() {
       dragCircle.current.style.boxShadow = "5px 5px 80px cyan";
       dragCircle.current.style.borderRadius = "50%";
       dragCircle.current.style.backgroundColor = "white";
+      dragCircle.current.style.mixBlendMode = "difference";
     }
   };
   const handlePointerDown = (event) => {
