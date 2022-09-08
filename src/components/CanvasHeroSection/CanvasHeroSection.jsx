@@ -118,17 +118,17 @@ function CanvasHeroSection() {
             animate={{ y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.3 }}
           >
-            Web Development
+            Frontend
           </motion.span>
         </p>
         <br />
         <p data-scroll data-scroll-speed="-1" className="designation-hero">
           <motion.span
             initial={{ y: 400, skewX: -30 }}
-            animate={{ y: 0, skewX: 0 }}
+            animate={{ x: window.innerWidth > 750 ? 100 : 50, y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.6 }}
           >
-            Student
+            Developer
           </motion.span>
         </p>
       </TitleContainer>
