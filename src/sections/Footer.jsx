@@ -8,7 +8,7 @@ import {
 } from "../components/FooterStyles/FooterStyles";
 import { motion } from "framer-motion";
 import { SiGmail, SiMessenger, SiWhatsapp } from "react-icons/si";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 function Footer() {
   const [show, setShow] = useState(false);
@@ -46,6 +46,14 @@ function Footer() {
               title="kmiqbal19"
             >
               <BsGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/k-m-iqbal-96a112146/"
+              rel="noreferrer"
+              target="_blank"
+              title="kmiqbal"
+            >
+              <BsLinkedin />
             </a>
             <a
               href="mailto: km.iqbal01@gmail.com"
