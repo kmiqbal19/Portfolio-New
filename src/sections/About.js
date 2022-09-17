@@ -90,11 +90,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
         >
-          I'm a self-taught developer. I got familiar with programming languages
-          like C and python in my bachelor's courses. But later, I got
-          interested in this awesome world of web development. So besides my
-          academic study, I started learning development and you know that
-          learning is a never-ending journey.
+          Developer via self-education. Throughout my bachelor's degree, I took
+          courses that introduced me to programming languages like C and Python.
+          Later on though, I became fascinated by the amazing world of web
+          development. As a result, I began learning development in addition to
+          my academic studies because, as you are probably aware, learning is a
+          lifelong endeavor.
         </motion.p>
         <br />
         <motion.p
@@ -102,8 +103,8 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          I live in Magdeburg. I am doing my final semester of my masters in
-          process engineering here.
+          I reside in Magdeburg. Here, I'm finishing up my final semester of
+          graduate school for process safety and environmental engineering.
         </motion.p>
         <br />
         <motion.p
@@ -111,8 +112,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
         >
-          I love learning new web tools , build web projects, play game and read
-          articles. You can contact me via social links.
+          I enjoy building websites, learning new web technologies, playing
+          games, and reading articles. You can reach me via my social media
+          links.
         </motion.p>
       </AboutTextContainer>
 
