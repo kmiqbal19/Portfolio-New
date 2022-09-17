@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 export const DraggableSquare1 = styled(motion.div)`
   width: ${(props) => props.theme.squareLenghtSm};
@@ -17,6 +17,25 @@ export const DraggableSquare1 = styled(motion.div)`
   }
 `;
 // Box with "MOVE US"
+const flashBorder = keyframes`
+
+    0% {
+      box-shadow: 3px 4px 10px red;
+    }
+    30%{
+      box-shadow: 3px 4px 30px cyan;
+    }
+    50% {
+      box-shadow: 3px 4px 10px blue;
+    }
+    80% {
+      box-shadow: 3px 4px 10px purple;
+    }
+    100% {
+      box-shadow: 3px 4px 10px red;
+    }
+  
+`;
 export const DraggableSquare2 = styled(motion.div)`
   width: ${(props) => props.theme.squareLenghtLg};
   height: ${(props) => props.theme.squareLenghtLg};
@@ -30,6 +49,11 @@ export const DraggableSquare2 = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  animation-name: ${flashBorder};
+  animation-duration: 1s;
+
+  animation-iteration-count: infinite;
+
   span {
     color: white;
     text-shadow: 1px 1px 10px cyan;

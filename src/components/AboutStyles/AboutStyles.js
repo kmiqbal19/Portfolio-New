@@ -134,6 +134,7 @@ export const AboutTextContainer = styled.div`
     line-height: 1.8;
     font-family: "Ubuntu Mono", monospace;
     font-style: italic;
+    text-align: justify;
     &:nth-child(2) {
       text-indent: 50px;
     }
