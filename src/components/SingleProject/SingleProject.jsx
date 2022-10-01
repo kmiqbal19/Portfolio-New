@@ -24,10 +24,10 @@ function SingleProject({ title, builtWith, git, demo, imgLink }) {
     >
       <img src={imgLink} alt="project-img" />
       <LinkContainer>
-        <GitLink href={git}>
+        <GitLink target="_blank" rel="noopener noreferrer" href={git}>
           <FiGithub />
         </GitLink>
-        <ProjectLink href={demo}>
+        <ProjectLink target="_blank" rel="noopener noreferrer" href={demo}>
           <MdOutlinePreview />
         </ProjectLink>
       </LinkContainer>
