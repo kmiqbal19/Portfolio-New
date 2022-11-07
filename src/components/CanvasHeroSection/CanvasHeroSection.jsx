@@ -166,11 +166,11 @@ function CanvasHeroSection() {
           initial={{ opacity: 0.2 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 2,
+            duration: 0.5,
             yoyoDelay: 1,
             yoyo: Infinity,
             ease: "easeOut",
-            delay: 7,
+            delay: 1,
           }}
         >
           Short drag me in different direction
