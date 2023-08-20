@@ -11,6 +11,7 @@ import {
   CssContainer,
   SkillsQuote,
   SkillTitleContainer,
+  PythonContainer
 } from "../components/SkillsStyles/SkillsStyles";
 import {
   SiReact,
@@ -19,14 +20,14 @@ import {
   SiJavascript,
   SiHtml5,
   SiCss3,
+  SiPython
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 import SkillFamiliarity from "../components/SkillFamiliarity/SkillFamiliarity";
 const SkillsContainer = styled.div`
   width: 100%;
-  min-height: 250vh;
+  min-height: 450vh;
   position: relative;
-
   background-color: black;
   padding-top: 10rem;
   @media screen and (max-width: 850px) {
@@ -91,6 +92,16 @@ function Skills() {
             Node.js
           </p>
         </NodeContainer>
+        <PythonContainer
+          initial={{ scale: 0.9 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <SiPython />
+          <p data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+            Python
+          </p>
+        </PythonContainer>
         <MongoDBContainer>
           <SiMongodb />
           <p

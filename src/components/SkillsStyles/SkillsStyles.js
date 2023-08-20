@@ -215,6 +215,36 @@ export const HtmlContainer = styled(motion.div)`
     }
   }
 `;
+export const PythonContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(10rem + 5vw);
+  height: calc(10rem + 5vw);
+
+  position: absolute;
+  left: 15%;
+  bottom: 45%;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  svg {
+    width: 70%;
+    height: 80%;
+
+    fill: #306998;
+
+  }
+  p {
+    position: absolute;
+    bottom: -10%;
+    mix-blend-mode: excursion;
+    font-size: calc(7rem + 3vw);
+    @media screen and (max-width: 480px) {
+      font-size: calc(5rem + 3vw);
+    }
+  }
+`;
 export const CssContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
