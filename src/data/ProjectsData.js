@@ -33,6 +33,13 @@ const ProjectsData = [
     projectDemoLink: "https://glow-todo.netlify.app/",
     imageLink: glowtodoImg,
   },
+  {
+    title: "GLOWTOO",
+    builtWith: "Built with vanilla JavaScript, HTML, CSS (MY FIRST JS PROJECT)",
+    gitLink: "https://github.com/kmiqbal19/GlowToDo-App",
+    projectDemoLink: "https://glow-todo.netlify.app/",
+    imageLink: glowtodoImg,
+  },
 ];
 
 export default ProjectsData;
