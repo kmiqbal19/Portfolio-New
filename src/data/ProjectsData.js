@@ -2,6 +2,8 @@ import taskemanImg from "../assets/Images/projects/Taskeman/Taskeman-img.png";
 import clogblogImg from "../assets/Images/projects/Clogblog Mockup/clogblog-img.png";
 import glowtodoImg from "../assets/Images/projects/Glow Todo/glowtodo-img.png";
 import ArRahmanImg from "../assets/Images/projects/Ar-rahman/ar-rahman-img-mockup.png";
+import buyHereImg from "../assets/Images/projects/Buy Here/buyhere.png"
+
 const ProjectsData = [
   {
     title: "taskeman",
@@ -12,6 +14,14 @@ const ProjectsData = [
     imageLink: taskemanImg,
   },
   {
+    title: "Buy Here",
+    builtWith:
+      "Built with Flask, SqlAlchemy, Jinja Template",
+    gitLink: "https://github.com/kmiqbal19/BuyHere",
+    projectDemoLink: "https://buyhere-0d21248012e3.herokuapp.com/",
+    imageLink: buyHereImg,
+  },
+  {
     title: "ClogBlog",
     builtWith:
       "Built with React, ContextAPI, Express, MongoDB, Cloudinary (MERN Stack)",
@@ -19,6 +29,7 @@ const ProjectsData = [
     projectDemoLink: "https://clogblog.netlify.app/",
     imageLink: clogblogImg,
   },
+ 
   {
     title: "NPO TEMPLATE",
     builtWith: "Built with React, Sanity (CMS), Sass, Framer Motion, GSAP ",
