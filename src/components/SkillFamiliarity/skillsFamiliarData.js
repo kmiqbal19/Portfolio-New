@@ -1,8 +1,8 @@
 export const skillsFamiliarData = [
     {
-        skillName: 'Material UI',
-        img: 'https://i.ibb.co/0nSddwG/pngwing-com.png',
-        alt: 'mui'
+        skillName: 'Cloudinary',
+        img: 'https://i.ibb.co/z2KBypq/stacked-logo-blue.png',
+        alt: 'cloudinary'
     },
     {
         skillName: 'Sass',
@@ -25,7 +25,7 @@ export const skillsFamiliarData = [
         alt: 'three.js'
     },
     {
-        skillName: 'Sanity',
+        skillName: 'Sanity CMS',
         img: 'https://i.ibb.co/RBLBY4y/sanity.webp',
         alt: 'sanity.io'
     },
@@ -34,9 +34,10 @@ export const skillsFamiliarData = [
         img: 'https://i.ibb.co/0QBf0zq/cover.png',
         alt: 'framer-motion'
     },
+
     {
-        skillName: 'Cloudinary',
-        img: 'https://i.ibb.co/z2KBypq/stacked-logo-blue.png',
-        alt: 'cloudinary'
+        skillName: 'Material UI',
+        img: 'https://i.ibb.co/0nSddwG/pngwing-com.png',
+        alt: 'mui'
     },
 ]
