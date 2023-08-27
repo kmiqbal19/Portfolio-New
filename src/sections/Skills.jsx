@@ -11,7 +11,11 @@ import {
   CssContainer,
   SkillsQuote,
   SkillTitleContainer,
-  PythonContainer
+  PythonContainer,
+  FastAPIContainer,
+  SqlContainer,
+  GreensockContainer
+
 } from "../components/SkillsStyles/SkillsStyles";
 import {
   SiReact,
@@ -20,13 +24,17 @@ import {
   SiJavascript,
   SiHtml5,
   SiCss3,
-  SiPython
+  SiPython,
+  SiFastapi,
+  SiGreensock,
+  SiMysql
+
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 import SkillFamiliarity from "../components/SkillFamiliarity/SkillFamiliarity";
 const SkillsContainer = styled.div`
   width: 100%;
-  min-height: 450vh;
+  min-height: 350vh;
   position: relative;
   background-color: black;
   padding-top: 10rem;
@@ -94,7 +102,7 @@ function Skills() {
         </NodeContainer>
         <PythonContainer
           initial={{ scale: 0.9 }}
-          whileInView={{ scale: 1 }}
+          whileInView={{ scale: 1.3 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <SiPython />
@@ -102,6 +110,36 @@ function Skills() {
             Python
           </p>
         </PythonContainer>
+        <FastAPIContainer
+          initial={{ scale: 0.9 }}
+          whileInView={{ scale: 1.1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <SiFastapi />
+          <p data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">
+            FastAPI
+          </p>
+        </FastAPIContainer>
+        <SqlContainer
+          initial={{ scale: 0.9 }}
+          whileInView={{ scale: 1.1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <SiMysql />
+          <p data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">
+            MySQL
+          </p>
+        </SqlContainer>
+        <GreensockContainer
+          initial={{ scale: 0.9 }}
+          whileInView={{ scale: 1.1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <SiGreensock />
+          <p data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">
+            GSAP
+          </p>
+        </GreensockContainer>
         <MongoDBContainer>
           <SiMongodb />
           <p
@@ -112,7 +150,9 @@ function Skills() {
             MongoDB
           </p>
         </MongoDBContainer>
-        <ReduxContainer>
+        <ReduxContainer        initial={{ scale: 0.9 }}
+          whileInView={{ scale: 1.1 }}
+          transition={{ duration: 0.3, delay: 1 }}>
           <SiRedux />
           <p
             data-scroll

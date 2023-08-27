@@ -9,7 +9,7 @@ export const ReactContainer = styled(motion.div)`
   height: calc(20rem + 5vw);
   position: absolute;
   right: 30%;
-  top: 15%;
+  top: 10%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -57,7 +57,7 @@ export const NodeContainer = styled(motion.div)`
   height: calc(15rem + 5vw);
   position: absolute;
   right: 10%;
-  top: 35%;
+  top: 25%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -88,8 +88,9 @@ export const MongoDBContainer = styled(motion.div)`
   width: calc(25rem + 5vw);
   height: calc(25rem + 5vw);
   position: absolute;
-  right: 30%;
-  bottom: 13%;
+  left: 20%;
+  bottom: 30%;
+
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -124,8 +125,8 @@ export const ReduxContainer = styled(motion.div)`
   width: calc(8rem + 2vw);
   height: calc(8rem + 2vw);
   position: absolute;
-  right: 10%;
-  bottom: 35%;
+  right: 15%;
+  bottom: 50%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -133,7 +134,7 @@ export const ReduxContainer = styled(motion.div)`
     height: calc(7rem + 3vw);
   }
   @media screen and (max-width: 480px) {
-    right: 15%;
+    right: 20%;
     bottom: 38%;
   }
   svg {
@@ -161,7 +162,7 @@ export const JSContainer = styled(motion.div)`
   height: calc(28rem + 5vw);
   position: absolute;
   left: 10%;
-  top: 28%;
+  top: 20%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -169,7 +170,7 @@ export const JSContainer = styled(motion.div)`
     height: calc(15rem + 6vw);
   }
   @media screen and (max-width: 480px) {
-    top: 24%;
+    top: 18%;
     left: 13%;
   }
   svg {
@@ -196,7 +197,7 @@ export const HtmlContainer = styled(motion.div)`
   height: calc(10rem + 5vw);
 
   position: absolute;
-  left: 25%;
+  right: 15%;
   bottom: 5%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
@@ -224,15 +225,23 @@ export const PythonContainer = styled(motion.div)`
   height: calc(10rem + 5vw);
 
   position: absolute;
-  left: 15%;
-  bottom: 45%;
+  right: 45%;
+  top: 35%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 480px) {
+    left: 15%;
+  top: 30%;
+    }
   svg {
-    width: 70%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
 
     fill: #306998;
+    @media screen and (max-width: 480px) {
+      width: 60%;
+      height: 60%;
+    }
 
   }
   p {
@@ -241,7 +250,118 @@ export const PythonContainer = styled(motion.div)`
     mix-blend-mode: excursion;
     font-size: calc(7rem + 3vw);
     @media screen and (max-width: 480px) {
+      font-size: calc(4rem + 3vw);
+    }
+  }
+`;
+export const SqlContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(10rem + 5vw);
+  height: calc(10rem + 5vw);
+
+  position: absolute;
+  right: 20%;
+  bottom: 30%;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 480px) {
+    right: 20%;
+  bottom: 25%;
+    }
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: #306998;
+
+  }
+  p {
+    position: absolute;
+    bottom: -10%;
+    mix-blend-mode: excursion;
+    font-size: calc(7rem + 2vw);
+    @media screen and (max-width: 480px) {
       font-size: calc(5rem + 3vw);
+    }
+  }
+`;
+export const GreensockContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(10rem + 5vw);
+  height: calc(10rem + 5vw);
+
+  position: absolute;
+  left: 45%;
+  bottom: 15%;
+
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 480px) {
+    left: 25%;
+  bottom: 12%;
+    }
+  svg {
+    width: 90%;
+    height: 90%;
+    fill: #90ee90;
+  }
+  p {
+    position: absolute;
+    bottom: -10%;
+    mix-blend-mode: excursion;
+    font-size: calc(7rem + 3vw);
+    @media screen and (max-width: 480px) {
+      font-size: calc(5rem + 3vw);
+    }
+  }
+`;
+export const FastAPIContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(10rem + 5vw);
+  height: calc(10rem + 5vw);
+
+  position: absolute;
+
+  left: 15%;
+  top: 45%;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  svg {
+    width: 70%;
+    height: 80%;
+
+    fill: #25a18e;
+    animation-name: rotationapi;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes rotationapi {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+  }
+  p {
+    position: absolute;
+    bottom: -10%;
+    mix-blend-mode: excursion;
+    font-size: calc(7rem + 3vw);
+    @media screen and (max-width: 480px) {
+      font-size: calc(4rem + 3vw);
     }
   }
 `;
@@ -254,7 +374,7 @@ export const CssContainer = styled(motion.div)`
   height: calc(15rem + 5vw);
   position: absolute;
   left: 10%;
-  bottom: 25%;
+  bottom: 3%;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Roboto", sans-serif;
   @media screen and (max-width: 850px) {
@@ -262,12 +382,12 @@ export const CssContainer = styled(motion.div)`
     height: calc(9rem + 5vw);
   }
   @media screen and (max-width: 480px) {
-    left: 15%;
-    bottom: 25%;
+    left: 10%;
+    bottom: 20%;
   }
   svg {
-    width: 80%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     color: #0080ff;
   }
   p {
@@ -315,11 +435,13 @@ export const SkillsQuote = styled(motion.p)`
   color: rgba(255, 255, 255, 0.5);
   width: calc(350px + 6vw);
   line-height: 1.5;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translateX(-50%);
   text-align: left;
   @media screen and (max-width: 480px) {
     width: 300px;
+    top: 52%;
+    left: 50%;
   }
 `;
