@@ -6,7 +6,8 @@ export const Section = styled.section`
 
   position: relative;
 
-  background-color: red;
+  /* background-color: red; */
+  background-color: white;
 `;
 
 export const Overlay = styled.div`
@@ -80,6 +81,7 @@ export const ImageContainer = styled.img`
 export const AboutTextContainer = styled.div`
   width: 50vw;
   height: 100vh;
+ 
   /* border: 1px solid white; */
   margin-right: 10rem;
   position: absolute;
@@ -90,7 +92,8 @@ export const AboutTextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  /* color: azure; */
   padding: 1rem 4rem;
   z-index: 2;
   &::-webkit-scrollbar {

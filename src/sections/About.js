@@ -12,7 +12,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import img1 from "../assets/Images/img-1.jpeg";
 import img2 from "../assets/Images/img-2.jpeg";
-import img3 from "../assets/Images/img-3.jpeg";
+import img3 from "../assets/Images/img-3.png";
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -103,8 +103,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          I reside in Magdeburg. Here, I'm finishing up my final semester of
-          graduate school for process safety and environmental engineering.
+          I reside in Magdeburg. Here, I'm doing my masters in <a href="https://www.ovgu.de/en/Study/Study+Programmes/Master/Digital+Engineering.html" target="_blank" rel="noreferrer"><b>Digital Engineering</b></a> (Faculty of Computer Science) at Otto Von Guericke University Magdeburg.
         </motion.p>
         <br />
         <motion.p

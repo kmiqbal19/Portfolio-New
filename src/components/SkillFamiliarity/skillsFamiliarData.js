@@ -1,5 +1,10 @@
 export const skillsFamiliarData = [
     {
+        skillName: 'Material UI',
+        img: 'https://i.ibb.co/0nSddwG/pngwing-com.png',
+        alt: 'mui'
+    },
+    {
         skillName: 'Sass',
         img: 'https://i.ibb.co/FKcPC9Z/sass.png',
         alt: 'sass'
