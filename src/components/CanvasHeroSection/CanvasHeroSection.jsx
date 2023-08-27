@@ -118,7 +118,8 @@ function CanvasHeroSection() {
             animate={{ y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.3 }}
           >
-            Frontend
+            {/* Frontend */}
+            Full Stack 
           </motion.span>
         </p>
         <br />
