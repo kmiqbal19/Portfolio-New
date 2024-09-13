@@ -14,7 +14,8 @@ import {
   PythonContainer,
   FastAPIContainer,
   SqlContainer,
-  GreensockContainer
+  GreensockContainer,
+  ExpressContainer
 
 } from "../components/SkillsStyles/SkillsStyles";
 import {
@@ -27,8 +28,8 @@ import {
   SiPython,
   SiFastapi,
   SiGreensock,
-  SiMysql
-
+  SiMysql,
+  SiExpress 
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 import SkillFamiliarity from "../components/SkillFamiliarity/SkillFamiliarity";
@@ -100,6 +101,16 @@ function Skills() {
             Node.js
           </p>
         </NodeContainer>
+        <ExpressContainer
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <SiExpress />
+          <p data-scroll data-scroll-speed="-3">
+            Express
+          </p>
+        </ExpressContainer>
         <PythonContainer
           initial={{ scale: 0.9 }}
           whileInView={{ scale: 1.3 }}

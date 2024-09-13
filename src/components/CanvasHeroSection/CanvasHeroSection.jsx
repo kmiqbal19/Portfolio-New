@@ -118,8 +118,8 @@ function CanvasHeroSection() {
             animate={{ y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.3 }}
           >
-            {/* Frontend */}
-            Full Stack 
+            Frontend
+            {/* Full Stack  */}
           </motion.span>
         </p>
         <br />
@@ -129,7 +129,7 @@ function CanvasHeroSection() {
             animate={{ x: window.innerWidth > 750 ? 100 : 50, y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.6 }}
           >
-            Developer
+            Engineer
           </motion.span>
         </p>
       </TitleContainer>
