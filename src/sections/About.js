@@ -103,7 +103,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          I reside in Magdeburg. Here, I'm doing my M.Sc in <a href="https://www.ovgu.de/en/Study/Study+Programmes/Master/Digital+Engineering.html" target="_blank" rel="noreferrer"><b>Digital Engineering</b></a> (Faculty of Computer Science) at Otto Von Guericke University Magdeburg.
+          I reside in Magdeburg. Here, I'm doing my second M.Sc in <a href="https://www.ovgu.de/en/Study/Study+Programmes/Master/Digital+Engineering.html" target="_blank" rel="noreferrer"><b>Digital Engineering</b></a> (Faculty of Computer Science) at Otto Von Guericke University Magdeburg.
         </motion.p>
         <br />
         <motion.p
