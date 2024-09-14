@@ -15,7 +15,8 @@ import {
   FastAPIContainer,
   SqlContainer,
   GreensockContainer,
-  ExpressContainer
+  ExpressContainer,
+  TSContainer
 
 } from "../components/SkillsStyles/SkillsStyles";
 import {
@@ -29,7 +30,8 @@ import {
   SiFastapi,
   SiGreensock,
   SiMysql,
-  SiExpress 
+  SiExpress ,
+  SiTypescript 
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 import SkillFamiliarity from "../components/SkillFamiliarity/SkillFamiliarity";
@@ -183,6 +185,16 @@ function Skills() {
             JavaScript
           </p>
         </JSContainer>
+        <TSContainer
+          initial={{ scale: 0.95 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.3, delay: 0.4 }}
+        >
+          <SiTypescript />
+          <p data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+            TypeScript
+          </p>
+        </TSContainer>
         <HtmlContainer>
           <SiHtml5 />
           <p
