@@ -50,6 +50,7 @@ function CanvasHeroSection() {
       boxShadow: "5px 5px 30px cyan",
       duration: 20,
       delay: 9,
+      backgroundColor: "red"
     });
     gsap.to(shootingSquare2.current, {
       y: function (y) {
@@ -174,7 +175,7 @@ function CanvasHeroSection() {
             delay: 1,
           }}
         >
-          Short drag me in different direction
+          👉 DRAG ME 👈
         </motion.span>
       </DraggableSquare2>
       <DraggableSquare3
@@ -205,6 +206,7 @@ function CanvasHeroSection() {
         }}
         onDragEnd={handleDragEnd}
       />
+      {/* BIG CIRCLE TO DRAG FREELY */}
       <DraggableCircle
         dragControls={controls}
         ref={dragCircle}
@@ -214,6 +216,7 @@ function CanvasHeroSection() {
         drag
         dragElastic={0.9}
       ></DraggableCircle>
+      {/* SHOOTING SQUARE TO GET BACK THE DRAGGING CIRCLE */}
       <ShootingSquare1
         title="Get him back!"
         onPointerDown={handlePointerDown}

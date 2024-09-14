@@ -104,12 +104,12 @@ function Skills() {
           </p>
         </NodeContainer>
         <ExpressContainer
-          initial={{ scale: 0.8 }}
+          initial={{ scale: 0.6 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <SiExpress />
-          <p data-scroll data-scroll-speed="-3">
+          <p data-scroll data-scroll-speed="-3" data-scroll-direction='horizontal'>
             Express
           </p>
         </ExpressContainer>

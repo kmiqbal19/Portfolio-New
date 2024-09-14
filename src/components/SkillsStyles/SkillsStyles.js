@@ -107,7 +107,7 @@ export const ExpressContainer = styled(motion.div)`
   }
   p {
     position: absolute;
-    bottom: -10%;
+    top: 10%;
     mix-blend-mode: excursion;
     font-size: calc(4rem + 3vw);
   }
