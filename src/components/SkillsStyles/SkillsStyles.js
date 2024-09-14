@@ -80,6 +80,38 @@ export const NodeContainer = styled(motion.div)`
     font-size: calc(4rem + 3vw);
   }
 `;
+export const ExpressContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(12rem + 5vw);
+  height: calc(12rem + 5vw);
+  position: absolute;
+  left: 25%;
+  bottom: 18%;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(8rem + 6vw);
+    height: calc(8rem + 6vw);
+  }
+  @media screen and (max-width: 480px) {
+    left: 56%;
+    bottom: 17%;
+  }
+  svg {
+    width: 80%;
+    height: 80%;
+    color: white;
+  }
+  p {
+    position: absolute;
+    top: 10%;
+    mix-blend-mode: excursion;
+    font-size: calc(4rem + 3vw);
+  }
+`;
 export const MongoDBContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
@@ -158,8 +190,8 @@ export const JSContainer = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: calc(28rem + 5vw);
-  height: calc(28rem + 5vw);
+  width: calc(22rem + 5vw);
+  height: calc(22rem + 5vw);
   position: absolute;
   left: 10%;
   top: 20%;
@@ -185,6 +217,41 @@ export const JSContainer = styled(motion.div)`
     font-size: calc(8rem + 2vw);
     @media screen and (max-width: 850px) {
       font-size: calc(5rem + 2vw);
+    }
+  }
+`;
+export const TSContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: calc(15rem + 5vw);
+  height: calc(15rem + 5vw);
+  position: absolute;
+  left: 45%;
+  top: 18%;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+  @media screen and (max-width: 850px) {
+    width: calc(11rem + 6vw);
+    height: calc(11rem + 6vw);
+  }
+  @media screen and (max-width: 480px) {
+    top: 25%;
+    right: 13%;
+  }
+  svg {
+    width: 65%;
+    height: 65%;
+    color: #358ef1;
+  }
+  p {
+    position: absolute;
+    bottom: 0%;
+    mix-blend-mode: excursion;
+    font-size: calc(6rem + 2vw);
+    @media screen and (max-width: 850px) {
+      font-size: calc(4rem + 2vw);
     }
   }
 `;
