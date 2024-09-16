@@ -90,12 +90,19 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
         >
-          Developer via self-education. Throughout my bachelor's degree, I took
+          {/* Developer via self-education. Throughout my bachelor's degree, I took
           courses that introduced me to programming languages like C and Python.
           Later on though, I became fascinated by the amazing world of web
           development. As a result, I began learning development in addition to
           my academic studies because, as you are probably aware, learning is a
-          lifelong endeavor.
+          lifelong endeavor. */}
+          I am an autodidactic developer. Learning about development was once a
+          hobby of mine before becoming my passion. This is my favorite
+          intellectual endeavor by far and my objective is to transition to this
+          fantastic field. With various web technologies, I can develop both
+          static and dynamic websites. I am capable of creating intricate
+          animations and interactions, and I also enjoy making these. I am a
+          self-starter with a quick learning curve.
         </motion.p>
         <br />
         <motion.p
@@ -103,7 +110,16 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          I reside in Magdeburg. Here, I'm doing my second M.Sc in <a href="https://www.ovgu.de/en/Study/Study+Programmes/Master/Digital+Engineering.html" target="_blank" rel="noreferrer"><b>Digital Engineering</b></a> (Faculty of Computer Science) at Otto Von Guericke University Magdeburg.
+          I reside in Magdeburg. Here, I'm doing my second M.Sc in{" "}
+          <a
+            href="https://www.ovgu.de/en/Study/Study+Programmes/Master/Digital+Engineering.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <b>Digital Engineering</b>
+          </a>{" "}
+          (Faculty of Computer Science) at Otto Von Guericke University
+          Magdeburg.
         </motion.p>
         <br />
         <motion.p
