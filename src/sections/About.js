@@ -90,12 +90,6 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
         >
-          {/* Developer via self-education. Throughout my bachelor's degree, I took
-          courses that introduced me to programming languages like C and Python.
-          Later on though, I became fascinated by the amazing world of web
-          development. As a result, I began learning development in addition to
-          my academic studies because, as you are probably aware, learning is a
-          lifelong endeavor. */}
           I am an autodidactic developer. Learning about development was once a
           hobby of mine before becoming my passion. This is my favorite
           intellectual endeavor by far and my objective is to transition to this
