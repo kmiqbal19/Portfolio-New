@@ -89,7 +89,7 @@ function Footer() {
           <li>Locmotive Scroll</li>
           <li>Netlify</li>
         </ul>
-        <p>&copy; Portfolio 2022</p>
+        <p>&copy; Portfolio {new Date().getFullYear()}</p>
         <p>
           Designed and developed by me. Built{" "}
           <span onClick={() => setShow(!show)}>info</span>
