@@ -93,7 +93,7 @@ const About = () => {
           I am an autodidactic developer. Learning about development was once a
           hobby of mine before becoming my passion. This is my favorite
           intellectual endeavor by far and my objective is to transition to this
-          fantastic field. With various web technologies, I can develop both
+          fantastic field. With various web software technologies, I can develop both
           static and dynamic websites. I am capable of creating intricate
           animations and interactions, and I also enjoy making these. I am a
           self-starter with a quick learning curve.
@@ -121,7 +121,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
         >
-          I enjoy building websites, learning new web technologies, playing
+          I enjoy building websites, Saas applications, learning new web technologies, playing
           games, and reading articles. You can reach me via my social media
           links.
         </motion.p>

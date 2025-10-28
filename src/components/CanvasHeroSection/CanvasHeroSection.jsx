@@ -110,7 +110,7 @@ function CanvasHeroSection() {
             animate={{ y: 0, skewX: 0 }}
             transition={{ delay: 4.8, duration: 1, ease: "easeOut" }}
           >
-            Khandakar Iqbal
+            Iqbal Khandakar
           </motion.span>
         </p>
         <p data-scroll data-scroll-speed="-1" className="designation-hero">
@@ -119,8 +119,9 @@ function CanvasHeroSection() {
             animate={{ y: 0, skewX: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 5.3 }}
           >
-            Frontend
+            {/* Frontend */}
             {/* Full Stack  */}
+            Software
           </motion.span>
         </p>
         <br />
