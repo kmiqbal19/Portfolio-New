@@ -122,7 +122,8 @@ function CanvasHeroSection() {
             {/* Frontend */}
             {/* Full Stack  */}
             {/* Software */}
-            Enthusiastic
+            {/* Enthusiastic */}
+            Web 
           </motion.span>
         </p>
         <br />
@@ -133,7 +134,8 @@ function CanvasHeroSection() {
             transition={{ duration: 1, ease: "easeOut", delay: 5.6 }}
           >
             {/* Engineer */}
-            Learner
+            {/* Learner */}
+            Developer
           </motion.span>
         </p>
       </TitleContainer>
